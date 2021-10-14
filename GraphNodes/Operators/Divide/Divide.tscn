@@ -1,0 +1,31 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://GraphNodes/Operators/Divide/Divide.gd" type="Script" id=1]
+
+[node name="Divide" type="GraphNode"]
+margin_right = 32.0
+margin_bottom = 30.0
+title = "Divide Node"
+slot/0/left_enabled = true
+slot/0/left_type = 0
+slot/0/left_color = Color( 0.403922, 1, 0.384314, 1 )
+slot/0/right_enabled = true
+slot/0/right_type = 0
+slot/0/right_color = Color( 0.403922, 1, 0.384314, 1 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="A" type="SpinBox" parent="."]
+margin_left = 16.0
+margin_top = 24.0
+margin_right = 95.0
+margin_bottom = 48.0
+min_value = -1.0
+max_value = 1.0
+value = 127.0
+rounded = true
+allow_greater = true
+allow_lesser = true
+prefix = "By"
