@@ -19,60 +19,6 @@ margin_right = 170.0
 margin_bottom = 37.0
 text = "LayoutButton"
 
-[node name="Button2" type="Button" parent="Menu"]
-margin_left = 178.0
-margin_right = 348.0
-margin_bottom = 37.0
-text = "LayoutButton"
-
-[node name="Button3" type="Button" parent="Menu"]
-margin_left = 356.0
-margin_right = 526.0
-margin_bottom = 37.0
-text = "LayoutButton"
-
-[node name="Button4" type="Button" parent="Menu"]
-margin_left = 534.0
-margin_right = 704.0
-margin_bottom = 37.0
-text = "LayoutButton"
-
-[node name="Button5" type="Button" parent="Menu"]
-margin_left = 712.0
-margin_right = 882.0
-margin_bottom = 37.0
-text = "LayoutButton"
-
-[node name="Button6" type="Button" parent="Menu"]
-margin_left = 890.0
-margin_right = 1060.0
-margin_bottom = 37.0
-text = "LayoutButton"
-
-[node name="Button7" type="Button" parent="Menu"]
-margin_left = 1068.0
-margin_right = 1238.0
-margin_bottom = 37.0
-text = "LayoutButton"
-
-[node name="Button8" type="Button" parent="Menu"]
-margin_left = 1246.0
-margin_right = 1416.0
-margin_bottom = 37.0
-text = "LayoutButton"
-
-[node name="Button9" type="Button" parent="Menu"]
-margin_left = 1424.0
-margin_right = 1594.0
-margin_bottom = 37.0
-text = "LayoutButton"
-
-[node name="Button10" type="Button" parent="Menu"]
-margin_left = 1602.0
-margin_right = 1772.0
-margin_bottom = 37.0
-text = "LayoutButton"
-
 [node name="MIDI" parent="." instance=ExtResource( 2 )]
 
 [node name="HBoxContainer" type="HSplitContainer" parent="."]
