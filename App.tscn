@@ -10,26 +10,41 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Menu" type="HBoxContainer" parent="."]
+[node name="Menu" type="ColorRect" parent="."]
 margin_right = 1920.0
-margin_bottom = 37.0
+margin_bottom = 50.0
+rect_min_size = Vector2( 0, 50 )
+size_flags_horizontal = 3
+color = Color( 0.172549, 0.164706, 0.196078, 1 )
 
-[node name="Button" type="Button" parent="Menu"]
-margin_right = 170.0
-margin_bottom = 37.0
-text = "LayoutButton"
+[node name="Items" type="HBoxContainer" parent="Menu"]
+rect_min_size = Vector2( 0, 50 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="file" type="MenuButton" parent="Menu/Items"]
+margin_right = 61.0
+margin_bottom = 50.0
+text = "File"
+
+[node name="edit" type="MenuButton" parent="Menu/Items"]
+margin_left = 69.0
+margin_right = 134.0
+margin_bottom = 50.0
+text = "Edit"
 
 [node name="MIDI" parent="." instance=ExtResource( 2 )]
 
 [node name="HBoxContainer" type="HSplitContainer" parent="."]
-margin_top = 45.0
+margin_top = 58.0
 margin_right = 1920.0
 margin_bottom = 1080.0
 size_flags_vertical = 3
 
 [node name="Tabs" type="TabContainer" parent="HBoxContainer"]
 margin_right = 1920.0
-margin_bottom = 1035.0
+margin_bottom = 1022.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 

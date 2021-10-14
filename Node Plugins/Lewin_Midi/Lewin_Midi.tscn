@@ -67,6 +67,7 @@ margin_right = 322.0
 margin_bottom = 143.0
 disabled = true
 text = "Device"
+flat = true
 
 [node name="channel" type="SpinBox" parent="." index="2"]
 margin_left = 32.0
@@ -92,6 +93,7 @@ margin_top = 239.0
 margin_right = 322.0
 margin_bottom = 276.0
 text = "Behavour"
+flat = true
 
 [node name="midiout" parent="." index="5" instance=ExtResource( 2 )]
 anchor_right = 0.0
