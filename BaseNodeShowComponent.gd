@@ -19,8 +19,8 @@ func _ready():
 	self.hint_tooltip = HelpText
 	
 func _physics_process(delta):
-	if OutPort:
-		OutPort.InValue = self.OutValue
+	if InPort != null:
+		self.InValue = InPort.OutValue
 	
 	
 # Could add listeners here

@@ -1,10 +1,13 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Node Plugins/Lewin_Multiply/Lewin_Multiply.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Node Plugins/Lewin_Viewer/Lewin_Viewer.tscn" type="PackedScene" id=2]
 [ext_resource path="res://GraphEdit.gd" type="Script" id=3]
 [ext_resource path="res://Node Plugins/Lewin_Midi/Lewin_Midi.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Node Plugins/Lewin_DemoNode/lewin_DemoNode.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Node Plugins/Lewin_OpenPixelControl/Lewin_OpenPixelControl.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Node Plugins/Lewin_Vector3/Lewin_Vector3.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Node Plugins/Lewin_Vector3Array/Lewin_Vector3Array.tscn" type="PackedScene" id=8]
 
 [node name="Control" type="Control"]
 anchor_right = 1.0
@@ -19,7 +22,6 @@ anchor_bottom = 1.0
 custom_constants/port_grab_distance_vertical = 20
 custom_constants/port_grab_distance_horizontal = 20
 right_disconnects = true
-scroll_offset = Vector2( -240, -135 )
 zoom = 0.75
 script = ExtResource( 3 )
 __meta__ = {
@@ -27,34 +29,44 @@ __meta__ = {
 }
 
 [node name="Viewer" parent="GraphEdit" instance=ExtResource( 2 )]
-margin_left = 240.0
-margin_top = 135.0
-margin_right = 532.0
-margin_bottom = 301.0
+margin_right = 292.0
+margin_bottom = 166.0
 rect_scale = Vector2( 0.75, 0.75 )
 mouse_filter = 1
 
 [node name="Multiply Node2" parent="GraphEdit" instance=ExtResource( 1 )]
-margin_left = 240.0
-margin_top = 135.0
-margin_right = 605.0
-margin_bottom = 398.0
+margin_right = 365.0
+margin_bottom = 263.0
 rect_scale = Vector2( 0.75, 0.75 )
 mouse_filter = 1
 
 [node name="MidiNode" parent="GraphEdit" instance=ExtResource( 4 )]
-margin_left = 240.0
-margin_top = 135.0
-margin_right = 594.0
-margin_bottom = 532.0
+margin_right = 354.0
+margin_bottom = 397.0
 rect_scale = Vector2( 0.75, 0.75 )
 mouse_filter = 1
 
 [node name="DemoNode" parent="GraphEdit" instance=ExtResource( 5 )]
-margin_left = 240.0
-margin_top = 135.0
-margin_right = 448.0
-margin_bottom = 260.0
+margin_right = 208.0
+margin_bottom = 125.0
+rect_scale = Vector2( 0.75, 0.75 )
+mouse_filter = 1
+
+[node name="Open Pixel Control" parent="GraphEdit" instance=ExtResource( 6 )]
+margin_right = 298.0
+margin_bottom = 132.0
+rect_scale = Vector2( 0.75, 0.75 )
+mouse_filter = 1
+
+[node name="Vector3" parent="GraphEdit" instance=ExtResource( 7 )]
+margin_right = 179.0
+margin_bottom = 139.0
+rect_scale = Vector2( 0.75, 0.75 )
+mouse_filter = 1
+
+[node name="Vector 3 Array" parent="GraphEdit" instance=ExtResource( 8 )]
+margin_right = 260.0
+margin_bottom = 137.0
 rect_scale = Vector2( 0.75, 0.75 )
 mouse_filter = 1
 [connection signal="connection_request" from="GraphEdit" to="GraphEdit" method="_on_GraphEdit_connection_request"]

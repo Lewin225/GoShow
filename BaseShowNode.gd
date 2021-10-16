@@ -9,6 +9,8 @@ var y_size = 125
 var notes = ""
 var nodeType
 
+var colors = [Color.red, Color.green, Color.blue, Color.purple]
+
 var input_links = {}
 var output_links = {}
 var _slots = [] # Don't use this, It's just for getting the port InDeX right
@@ -48,15 +50,16 @@ func _ready():
 		if slot[0].has_method("_j0vfg5943wukfug54893qw0"): # It's a port
 			var port_node = slot[0]
 			var port_idx = slot[1]
+	
 			ports.append(port_node)
 
 			set_slot (port_idx, #GraphNode Slot Index
 			port_node.HasInPort, #Enable Left/ Inport
 			port_node.InType,	   #Type Left
-			Color.green, #Inport Color #TODO Actual Colors
+			colors[port_node.InType], #Inport Color #TODO Actual Colors
 			port_node.HasOutPort, #Enable Right / Outport
 			port_node.OutType, #Out/Right Type
-			Color.green, #Out/Right Color #TODO Actual Colors
+			colors[port_node.OutType], #Out/Right Color #TODO Actual Colors
 			null, #Left Texture
 			null ) #Right Texture
 
