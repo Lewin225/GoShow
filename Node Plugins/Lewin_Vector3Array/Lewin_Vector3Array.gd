@@ -15,7 +15,7 @@ func _ready():
 
 func _physics_process(delta):
 	
-	if length.InPort != null:
+	if length.InValue != null:
 		n = length.InValue
 		manual.editable = false
 		manual.value = length.InValue
@@ -24,8 +24,9 @@ func _physics_process(delta):
 		n = manual.value
 
 	if vec3.InPort:
-		a.resize(n)
+		a = []
 		for i in range(n):
-			a[i] = vec3.InValue
+			a.append(vec3.InValue)
 		vec3.OutValue = a
+		print(vec3.InValue, vec3.OutValue)
 		

@@ -1,13 +1,36 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://BaseShowNode.gd" type="Script" id=1]
+[ext_resource path="res://STYLE_BaseShowNode_TEST.tres" type="StyleBox" id=2]
+[ext_resource path="res://Resources/JetBrainsMono[wght].ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://Resources/BaseShowNode_Selected.tres" type="StyleBox" id=4]
+
+[sub_resource type="DynamicFont" id=1]
+size = 30
+use_mipmaps = true
+use_filter = true
+font_data = ExtResource( 3 )
 
 [node name="BaseShowNode" type="GraphNode"]
-margin_right = 121.0
-margin_bottom = 108.0
+margin_left = 0.629944
+margin_right = 208.63
+margin_bottom = 146.0
 rect_min_size = Vector2( 125, 125 )
+custom_styles/commentfocus = ExtResource( 2 )
+custom_styles/comment = ExtResource( 2 )
+custom_styles/frame = ExtResource( 2 )
+custom_styles/selectedframe = ExtResource( 4 )
+custom_styles/position = ExtResource( 2 )
+custom_styles/defaultfocus = ExtResource( 4 )
+custom_styles/breakpoint = ExtResource( 2 )
+custom_styles/defaultframe = ExtResource( 2 )
+custom_fonts/title_font = SubResource( 1 )
+custom_colors/close_color = Color( 0.627451, 0.627451, 0.627451, 1 )
+custom_colors/title_color = Color( 0.627451, 0.627451, 0.627451, 1 )
+custom_colors/resizer_color = Color( 0.627451, 0.627451, 0.627451, 1 )
 title = "Base Node"
 show_close = true
+resizable = true
 script = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false,

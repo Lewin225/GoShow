@@ -27,24 +27,25 @@ func _unhandled_input(event):
 		if event.channel == channel.value-1: #Compare indexed at 0
 			if event.controller_number == control.value:
 				if behavour.selected == 0: #Limited Encoder
-					midiout.OutValue = event.controller_value
+					midiout.OutValue = float(event.controller_value)
 					
 				if behavour.selected == 1: #Endless Encoder
 					if event.controller_value > 64:
-						midiout.OutValue += 1
+						midiout.OutValue += float(1)
 					if event.controller_value <= 64:
-						midiout.OutValue -= 1
+						midiout.OutValue -= float(1)
 					
 					
 				if behavour.selected == 2: #Push Button
-					midiout.OutValue = event.controller_value
+					midiout.OutValue = float(event.controller_value)
 					
 				if behavour.selected == 3: #Toggle Button
 					if toggle:
-						midiout.OutValue = 127
+						midiout.OutValue = float(127)
 					else:
-						midiout.OutValue = 0
+						midiout.OutValue = float(0)
 					toggle = not toggle
+
 
 			
 		

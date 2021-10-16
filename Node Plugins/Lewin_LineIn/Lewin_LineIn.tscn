@@ -23,10 +23,9 @@ slot/1/right_color = Color( 1, 1, 1, 1 )
 [node name="Level" parent="." index="0" instance=ExtResource( 2 )]
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 32.0
-margin_top = 48.0
-margin_right = 462.0
-margin_bottom = 73.0
+margin_top = 35.0
+margin_right = 430.0
+margin_bottom = 60.0
 HasOutPort = true
 
 [node name="Level" type="Label" parent="Level" index="0"]
@@ -43,10 +42,9 @@ stream = SubResource( 1 )
 bus = "LineIn"
 
 [node name="HBoxContainer" type="HBoxContainer" parent="." index="2"]
-margin_left = 32.0
-margin_top = 75.0
-margin_right = 462.0
-margin_bottom = 308.0
+margin_top = 62.0
+margin_right = 430.0
+margin_bottom = 295.0
 alignment = 1
 
 [node name="slider" type="VBoxContainer" parent="HBoxContainer" index="0"]

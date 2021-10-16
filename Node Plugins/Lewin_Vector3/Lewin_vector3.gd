@@ -8,13 +8,15 @@ var Vec3 = Vector3.ZERO
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	Vec3 = Vector3.UP
 	Y.OutValue = Vec3
 
 func _physics_process(delta):
-	if X.InPortConnection:
-		Vec3.X = X.InValue
-	if Y.InPortConnection:
-		Vec3.Y = Y.InValue
-	if Z.InPortConnection:
-		Vec3.Z = Z.InValue
+
+	if X.InPort:
+		Vec3.x = X.InValue
+	if Y.InPort:
+		Vec3.y = Y.InValue
+	if Z.InPort:
+		Vec3.z = Z.InValue
 	Y.OutValue = Vec3

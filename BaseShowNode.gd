@@ -9,7 +9,7 @@ var y_size = 125
 var notes = ""
 var nodeType
 
-var colors = [Color.red, Color.green, Color.blue, Color.purple]
+var colors = [Color('#97dfff'), Color('#e52557'), Color('#74ba4f'), Color('#36ba75')]
 
 var input_links = {}
 var output_links = {}

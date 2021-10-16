@@ -13,15 +13,23 @@ var OutPortConnection = null
 var InPort # Node connected to the inport
 var OutPort # Node connected to the outport
 var InValue # Node connected to the inport will set this when it updates, check physics process below
-var OutValue = -1 # Output value of this node, Update it please to do shit
+var OutValue # Output value of this node, Update it please to do shit
 
 func _ready():
 	self.hint_tooltip = HelpText
+	if OutType == DTYPE.Float:
+		OutValue = 0.0
+	if OutType == DTYPE.Boolean:
+		OutValue = false
+	if OutType == DTYPE.Vec3:
+		OutValue = Vector3.ZERO
+	if OutType == DTYPE.Vec3Array:
+		OutValue = []
 	
 func _physics_process(delta):
-	if InPort != null:
+	if InPort:
 		self.InValue = InPort.OutValue
-	
+
 	
 # Could add listeners here
 func set_inport_connection(BaseNodeShowComponent):

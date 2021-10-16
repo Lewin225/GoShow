@@ -24,10 +24,10 @@ slot/1/right_color = Color( 1, 1, 1, 1 )
 [node name="Vec3" parent="." index="0" instance=ExtResource( 2 )]
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 32.0
-margin_top = 48.0
-margin_right = 228.0
-margin_bottom = 73.0
+margin_left = 20.0
+margin_top = 50.0
+margin_right = 298.0
+margin_bottom = 75.0
 InType = 2
 OutType = 3
 HasInPort = true
@@ -36,10 +36,10 @@ HasOutPort = true
 [node name="Length" parent="." index="1" instance=ExtResource( 2 )]
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 32.0
-margin_top = 75.0
-margin_right = 228.0
-margin_bottom = 125.0
+margin_left = 20.0
+margin_top = 77.0
+margin_right = 298.0
+margin_bottom = 127.0
 rect_min_size = Vector2( 196, 50 )
 HasInPort = true
 
