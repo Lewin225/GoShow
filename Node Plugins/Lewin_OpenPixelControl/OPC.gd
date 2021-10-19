@@ -72,17 +72,21 @@ func send_pixels():
 	var high_byte = int(len(pixels)*3 / 256)
 	var low_byte = (len(pixels)*3) % 256
 	
-	var prams = [int(channel), command['SET_8_BIT_PIXEL'], high_byte, low_byte]
-	var prams_a = PoolByteArray(prams)
+	var pool = PoolByteArray()
+		
+	pool.append(0) # Channel
+	pool.append(0) # Command
+	pool.append(high_byte) # Length High Byte
+	pool.append(low_byte) # Length Low byte
 	
 	for pixel in pixels:
 		if pixel == null:
 			return
-		prams_a.append(int(clamp(int(pixel.x),0,255)))
-		prams_a.append(int(clamp(int(pixel.y),0,255)))
-		prams_a.append(int(clamp(int(pixel.z),0,255)))
+		pool.append(int(clamp(int(pixel.x),0,255)))
+		pool.append(int(clamp(int(pixel.y),0,255)))
+		pool.append(int(clamp(int(pixel.z),0,255)))
 	
-	_send(prams_a)
+	_send(pool)
 	last_pixels = pixels
 	
 

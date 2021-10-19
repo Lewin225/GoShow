@@ -52,7 +52,6 @@ custom_colors/resizer_color = Color( 0.686275, 0.686275, 0.686275, 1 )
 resizable = false
 
 [node name="Multiply Node2" parent="GraphEdit" instance=ExtResource( 1 )]
-visible = false
 margin_left = 0.0
 margin_right = 522.0
 margin_bottom = 293.0
@@ -80,8 +79,21 @@ custom_colors/title_color = Color( 0.686275, 0.686275, 0.686275, 1 )
 custom_colors/resizer_color = Color( 0.686275, 0.686275, 0.686275, 1 )
 resizable = false
 
+[node name="MidiNode2" parent="GraphEdit" instance=ExtResource( 4 )]
+margin_left = 0.0
+margin_right = 354.0
+margin_bottom = 427.0
+rect_scale = Vector2( 0.75, 0.75 )
+mouse_filter = 1
+custom_styles/selectedframe = ExtResource( 10 )
+custom_styles/defaultfocus = ExtResource( 10 )
+custom_fonts/title_font = SubResource( 1 )
+custom_colors/close_color = Color( 0, 0, 0, 1 )
+custom_colors/title_color = Color( 0.686275, 0.686275, 0.686275, 1 )
+custom_colors/resizer_color = Color( 0.686275, 0.686275, 0.686275, 1 )
+resizable = false
+
 [node name="DemoNode" parent="GraphEdit" instance=ExtResource( 5 )]
-visible = false
 margin_left = 0.0
 margin_right = 237.0
 margin_bottom = 142.0
@@ -138,7 +150,6 @@ custom_colors/resizer_color = Color( 0.686275, 0.686275, 0.686275, 1 )
 resizable = false
 
 [node name="MikuMeter" parent="GraphEdit" instance=ExtResource( 9 )]
-visible = false
 margin_left = 0.0
 margin_right = 465.0
 margin_bottom = 387.0

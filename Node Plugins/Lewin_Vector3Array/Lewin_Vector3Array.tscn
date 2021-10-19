@@ -32,7 +32,6 @@ InType = 2
 OutType = 3
 HasInPort = true
 HasOutPort = true
-PrintPortStats = true
 
 [node name="Length" parent="." index="1" instance=ExtResource( 2 )]
 anchor_right = 0.0
@@ -48,6 +47,9 @@ HasInPort = true
 anchor_right = 1.0
 anchor_bottom = 1.0
 rect_min_size = Vector2( 196, 45 )
+max_value = 255.0
+allow_greater = true
+allow_lesser = true
 prefix = "Len     "
 __meta__ = {
 "_edit_use_anchors_": false
