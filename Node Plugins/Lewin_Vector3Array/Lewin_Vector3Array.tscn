@@ -32,6 +32,7 @@ InType = 2
 OutType = 3
 HasInPort = true
 HasOutPort = true
+PrintPortStats = true
 
 [node name="Length" parent="." index="1" instance=ExtResource( 2 )]
 anchor_right = 0.0

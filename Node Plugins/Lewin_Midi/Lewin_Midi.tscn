@@ -51,57 +51,57 @@ slot/6/right_type = 0
 slot/6/right_color = Color( 1, 1, 1, 1 )
 
 [node name="Label" type="Label" parent="." index="0"]
-margin_left = 32.0
-margin_top = 48.0
-margin_right = 322.0
-margin_bottom = 104.0
+margin_left = 20.0
+margin_top = 50.0
+margin_right = 310.0
+margin_bottom = 106.0
 custom_colors/font_color = Color( 0.513726, 0.454902, 0.541176, 1 )
 custom_colors/font_color_shadow = Color( 0, 0, 0, 0.317647 )
 text = "Device selection coming soon(tm)"
 autowrap = true
 
 [node name="device" type="OptionButton" parent="." index="1"]
-margin_left = 32.0
-margin_top = 106.0
-margin_right = 322.0
-margin_bottom = 143.0
+margin_left = 20.0
+margin_top = 108.0
+margin_right = 310.0
+margin_bottom = 145.0
 disabled = true
 text = "Device"
 flat = true
 
 [node name="channel" type="SpinBox" parent="." index="2"]
-margin_left = 32.0
-margin_top = 145.0
-margin_right = 322.0
-margin_bottom = 190.0
+margin_left = 20.0
+margin_top = 147.0
+margin_right = 310.0
+margin_bottom = 192.0
 min_value = 1.0
 max_value = 16.0
 value = 1.0
 prefix = "Channel"
 
 [node name="control" type="SpinBox" parent="." index="3"]
-margin_left = 32.0
-margin_top = 192.0
-margin_right = 322.0
-margin_bottom = 237.0
+margin_left = 20.0
+margin_top = 194.0
+margin_right = 310.0
+margin_bottom = 239.0
 max_value = 127.0
 prefix = "Control"
 
 [node name="behavour" type="OptionButton" parent="." index="4"]
-margin_left = 32.0
-margin_top = 239.0
-margin_right = 322.0
-margin_bottom = 276.0
+margin_left = 20.0
+margin_top = 241.0
+margin_right = 310.0
+margin_bottom = 278.0
 text = "Behavour"
 flat = true
 
 [node name="midiout" parent="." index="5" instance=ExtResource( 2 )]
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 32.0
-margin_top = 278.0
-margin_right = 322.0
-margin_bottom = 303.0
+margin_left = 20.0
+margin_top = 280.0
+margin_right = 310.0
+margin_bottom = 305.0
 HasOutPort = true
 
 [node name="TextureRect" type="TextureRect" parent="midiout" index="0"]
@@ -115,10 +115,10 @@ __meta__ = {
 }
 
 [node name="learn" type="CheckButton" parent="." index="6"]
-margin_left = 32.0
-margin_top = 305.0
-margin_right = 322.0
-margin_bottom = 385.0
+margin_left = 20.0
+margin_top = 307.0
+margin_right = 310.0
+margin_bottom = 387.0
 text = "Learn Mode"
 
 [node name="Script" type="Node" parent="." index="7"]

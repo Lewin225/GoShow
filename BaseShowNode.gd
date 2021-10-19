@@ -14,7 +14,8 @@ var colors = [Color('#97dfff'), Color('#e52557'), Color('#74ba4f'), Color('#36ba
 var input_links = {}
 var output_links = {}
 var _slots = [] # Don't use this, It's just for getting the port InDeX right
-var ports = []
+var in_ports = []
+var out_ports = []
 
 func get_save_data():
 	return {
@@ -35,8 +36,11 @@ func load_save_data(data):
 	nodeType = data['type']
 	_ready()
 	
-func get_portnode_for_slot(idx):
-	return ports[idx]
+func get_outport_for_slot(idx):
+	return out_ports[idx]
+	
+func get_inport_for_slot(idx):
+	return in_ports[idx]
 	
 func _ready():
 	# Work out which children are ports
@@ -50,8 +54,11 @@ func _ready():
 		if slot[0].has_method("_j0vfg5943wukfug54893qw0"): # It's a port
 			var port_node = slot[0]
 			var port_idx = slot[1]
-	
-			ports.append(port_node)
+			
+			if port_node.HasOutPort:
+				out_ports.append(port_node)
+			if port_node.HasInPort:
+				in_ports.append(port_node)
 
 			set_slot (port_idx, #GraphNode Slot Index
 			port_node.HasInPort, #Enable Left/ Inport

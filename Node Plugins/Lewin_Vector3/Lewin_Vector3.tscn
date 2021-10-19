@@ -28,11 +28,12 @@ slot/2/right_color = Color( 1, 1, 1, 1 )
 [node name="X" parent="." index="0" instance=ExtResource( 2 )]
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 32.0
-margin_top = 48.0
-margin_right = 147.0
-margin_bottom = 73.0
+margin_left = 20.0
+margin_top = 50.0
+margin_right = 190.0
+margin_bottom = 75.0
 HasInPort = true
+PrintPortStats = true
 
 [node name="Label" type="Label" parent="X" index="0"]
 anchor_right = 1.0
@@ -45,13 +46,14 @@ __meta__ = {
 [node name="Y" parent="." index="1" instance=ExtResource( 2 )]
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 32.0
-margin_top = 75.0
-margin_right = 147.0
-margin_bottom = 100.0
+margin_left = 20.0
+margin_top = 77.0
+margin_right = 190.0
+margin_bottom = 102.0
 OutType = 2
 HasInPort = true
 HasOutPort = true
+PrintPortStats = true
 
 [node name="Label" type="Label" parent="Y" index="0"]
 anchor_top = 0.5
@@ -80,10 +82,10 @@ __meta__ = {
 [node name="Z" parent="." index="2" instance=ExtResource( 2 )]
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 32.0
-margin_top = 102.0
-margin_right = 147.0
-margin_bottom = 127.0
+margin_left = 20.0
+margin_top = 104.0
+margin_right = 190.0
+margin_bottom = 129.0
 HasInPort = true
 
 [node name="Label" type="Label" parent="Z" index="0"]

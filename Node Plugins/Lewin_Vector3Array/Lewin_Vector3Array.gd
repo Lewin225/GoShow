@@ -14,7 +14,7 @@ func _ready():
 
 
 func _physics_process(delta):
-	
+	#print(vec3.InValue)
 	if length.InValue != null:
 		n = length.InValue
 		manual.editable = false
@@ -28,5 +28,7 @@ func _physics_process(delta):
 		for i in range(n):
 			a.append(vec3.InValue)
 		vec3.OutValue = a
-		print(vec3.InValue, vec3.OutValue)
+		#print(vec3.InValue, vec3.OutValue)
+	else:
+		vec3.OutValue = null
 		
