@@ -2,12 +2,14 @@ extends Node
 
 onready var address = $"../address"
 onready var input = $"../Input"
+onready var reconnect = $"../Input/reconnect"
 var client     # StreamPeerTCP
 var packetpeer # PacketPeerStream
 var channel = 0
 var pixels = []
 var last_pixels = []
 var output_pixels = []
+
 
 var command = {
 	'SET_8_BIT_PIXEL':0,
@@ -25,6 +27,7 @@ func _physics_process(delta):
 	if input.InPort != null and input.InValue != null:
 		pixels = input.InValue
 		send_pixels()
+
 	
 func _exit_tree():
 	client.disconnect_from_host()
@@ -71,7 +74,7 @@ func send_pixels():
 	
 	var prams = [int(channel), command['SET_8_BIT_PIXEL'], high_byte, low_byte]
 	var prams_a = PoolByteArray(prams)
-
+	
 	for pixel in pixels:
 		if pixel == null:
 			return
@@ -85,24 +88,6 @@ func send_pixels():
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+func _on_reconnect_pressed():
+	drop_connection()
+	get_connection(address.text)

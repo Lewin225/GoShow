@@ -10,7 +10,7 @@ var n = 0
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+	pass
 
 
 func _physics_process(delta):
@@ -23,7 +23,7 @@ func _physics_process(delta):
 		manual.editable = true
 		n = manual.value
 
-	if vec3.InPort:
+	if vec3.InValue != null:
 		a = []
 		for i in range(n):
 			a.append(vec3.InValue)

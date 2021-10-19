@@ -10,7 +10,8 @@ func _on_GraphEdit_connection_request(from, from_slot, to, to_slot):
 		# This is just the visual for the line, Above connects the nodes
 		connect_node(from, from_slot, to, to_slot)#
 	else:
-		print("Opsee theres been a fuky wukky")
+		assert(false)
+		# Graphport connection failed, Why?
 		
 	
 
