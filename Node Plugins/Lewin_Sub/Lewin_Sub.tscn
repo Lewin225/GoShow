@@ -1,0 +1,63 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://GraphNodes/BaseShowNode.tscn" type="PackedScene" id=1]
+[ext_resource path="res://GraphNodes/BaseNodeShowComponent.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Node Plugins/Lewin_Sub/Lewin_Sub.gd" type="Script" id=3]
+
+[node name="Subtract" instance=ExtResource( 1 )]
+title = "Subtract"
+slot/0/left_enabled = false
+slot/0/left_type = 0
+slot/0/left_color = Color( 1, 1, 1, 1 )
+slot/0/right_enabled = false
+slot/0/right_type = 0
+slot/0/right_color = Color( 1, 1, 1, 1 )
+slot/1/left_enabled = false
+slot/1/left_type = 0
+slot/1/left_color = Color( 1, 1, 1, 1 )
+slot/1/right_enabled = false
+slot/1/right_type = 0
+slot/1/right_color = Color( 1, 1, 1, 1 )
+slot/2/left_enabled = false
+slot/2/left_type = 0
+slot/2/left_color = Color( 1, 1, 1, 1 )
+slot/2/right_enabled = false
+slot/2/right_type = 0
+slot/2/right_color = Color( 1, 1, 1, 1 )
+
+[node name="A" parent="." index="0" instance=ExtResource( 2 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 20.0
+margin_top = 50.0
+margin_right = 220.0
+margin_bottom = 75.0
+HasInPort = true
+HasOutPort = true
+
+[node name="Label" type="Label" parent="." index="1"]
+margin_left = 20.0
+margin_top = 77.0
+margin_right = 220.0
+margin_bottom = 102.0
+text = "-"
+
+[node name="B" parent="." index="2" instance=ExtResource( 2 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 20.0
+margin_top = 104.0
+margin_right = 220.0
+margin_bottom = 148.562
+rect_min_size = Vector2( 200, 44.562 )
+HasInPort = true
+
+[node name="manual" type="SpinBox" parent="B" index="0"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Script" type="Node" parent="." index="3"]
+script = ExtResource( 3 )

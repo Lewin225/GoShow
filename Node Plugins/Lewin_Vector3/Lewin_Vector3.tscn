@@ -37,7 +37,7 @@ HasInPort = true
 [node name="Label" type="Label" parent="X" index="0"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-text = "X \\"
+text = "X (R) \\"
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -59,7 +59,7 @@ anchor_bottom = 0.5
 margin_top = -12.5
 margin_right = 21.0
 margin_bottom = 12.5
-text = "Y -->"
+text = "Y (G) |-->"
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -89,7 +89,7 @@ HasInPort = true
 [node name="Label" type="Label" parent="Z" index="0"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-text = "Z /"
+text = "Z (B) /"
 __meta__ = {
 "_edit_use_anchors_": false
 }

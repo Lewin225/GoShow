@@ -19,12 +19,13 @@ var out_ports = []
 
 func get_save_data():
 	return {
-		'nodeType':nodeType,
+		'nodeType':self.filename,
+		'sceneNodeId':self.name,
 		'store':store,
 		'x_pos':x_pos,
 		'y_pos':y_pos,
-		'x_size':x_size,
-		'y_size':y_size,
+		'x_size':self.rect_size.x,
+		'y_size':self.rect_size.y,
 		'notes':notes,
 	}
 	
@@ -43,6 +44,7 @@ func get_inport_for_slot(idx):
 	return in_ports[idx]
 	
 func _ready():
+	print(get_save_data())
 	# Work out which children are ports
 	# We still want to keep them all so the correct index
 	# can be calculated when setting up the "slots" for graphnode

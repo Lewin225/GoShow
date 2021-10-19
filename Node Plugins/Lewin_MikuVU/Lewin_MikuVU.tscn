@@ -31,7 +31,7 @@ corner_radius_top_right = 10
 [node name="MikuMeter" instance=ExtResource( 1 )]
 margin_right = 464.0
 margin_bottom = 310.0
-title = "Miku Meter (built in)"
+title = "Meter (built in)"
 slot/0/left_enabled = false
 slot/0/left_type = 0
 slot/0/left_color = Color( 1, 1, 1, 1 )
@@ -64,6 +64,7 @@ __meta__ = {
 }
 
 [node name="TextureRect" type="TextureRect" parent="vu/bg" index="0"]
+visible = false
 modulate = Color( 1, 1, 1, 0.156863 )
 anchor_right = 1.0
 anchor_bottom = 1.0

@@ -21,6 +21,8 @@ func _unhandled_input(event):
 		if learn_toggle.pressed:
 			channel.value = event.channel
 			control.value = event.controller_number
+			print(event)
+			print("Event.value:", str(event.value))
 			#return - Comment in to prevent learn values escaping the node
 			
 		# Output midi 
