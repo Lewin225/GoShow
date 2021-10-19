@@ -1,6 +1,6 @@
 extends Control
 
-enum DTYPE{Float, Boolean, Vec3, Vec3Array} 
+enum DTYPE{Float, Boolean, Vec3, Vec3Array, Texture2D} 
 export(DTYPE) var InType
 export(DTYPE) var OutType
 export(bool) var HasInPort

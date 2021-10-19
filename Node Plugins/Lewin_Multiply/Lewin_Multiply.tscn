@@ -16,6 +16,12 @@ slot/0/left_color = Color( 1, 1, 1, 1 )
 slot/0/right_enabled = false
 slot/0/right_type = 0
 slot/0/right_color = Color( 1, 1, 1, 1 )
+slot/1/left_enabled = false
+slot/1/left_type = 0
+slot/1/left_color = Color( 1, 1, 1, 1 )
+slot/1/right_enabled = false
+slot/1/right_type = 0
+slot/1/right_color = Color( 1, 1, 1, 1 )
 
 [node name="MultiplyPort" parent="." index="0" instance=ExtResource( 2 )]
 anchor_right = 0.0
@@ -29,9 +35,21 @@ hint_tooltip = "Fuck"
 HasInPort = true
 HasOutPort = true
 
-[node name="Multiplier" type="SpinBox" parent="MultiplyPort" index="0"]
-anchor_right = 1.0
-anchor_bottom = 1.0
+[node name="multiplier" parent="." index="1" instance=ExtResource( 2 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 20.0
+margin_top = 102.0
+margin_right = 220.0
+margin_bottom = 127.0
+HasInPort = true
+
+[node name="manual" type="SpinBox" parent="multiplier" index="0"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -100.0
+margin_right = 100.0
+margin_bottom = 45.0
 min_value = -999.0
 max_value = 999.0
 step = 0.01
@@ -43,5 +61,5 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="TheCodeGoesHere" type="Node" parent="." index="1"]
+[node name="TheCodeGoesHere" type="Node" parent="." index="2"]
 script = ExtResource( 3 )
