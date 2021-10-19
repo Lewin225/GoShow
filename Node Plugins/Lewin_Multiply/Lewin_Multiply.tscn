@@ -5,46 +5,26 @@
 [ext_resource path="res://Node Plugins/Lewin_Multiply/Lewin_Multiply.gd" type="Script" id=3]
 
 [node name="Multiply Node" instance=ExtResource( 1 )]
-margin_right = 197.0
-margin_bottom = 153.0
-title = "Multiply (Node 2.0 Demo)"
+margin_left = 1.0
+margin_right = 241.0
+margin_bottom = 140.0
+rect_min_size = Vector2( 0, 0 )
+title = "Multiply"
 slot/0/left_enabled = false
 slot/0/left_type = 0
 slot/0/left_color = Color( 1, 1, 1, 1 )
 slot/0/right_enabled = false
 slot/0/right_type = 0
 slot/0/right_color = Color( 1, 1, 1, 1 )
-slot/1/left_enabled = false
-slot/1/left_type = 0
-slot/1/left_color = Color( 1, 1, 1, 1 )
-slot/1/right_enabled = false
-slot/1/right_type = 0
-slot/1/right_color = Color( 1, 1, 1, 1 )
-slot/2/left_enabled = false
-slot/2/left_type = 0
-slot/2/left_color = Color( 1, 1, 1, 1 )
-slot/2/right_enabled = false
-slot/2/right_type = 0
-slot/2/right_color = Color( 1, 1, 1, 1 )
 
-[node name="Label" type="Label" parent="." index="0"]
-margin_left = 32.0
-margin_top = 48.0
-margin_right = 333.0
-margin_bottom = 73.0
-rect_min_size = Vector2( 0, 20 )
-custom_colors/font_color = Color( 0.533867, 0.4816, 0.56, 1 )
-custom_colors/font_color_shadow = Color( 0, 0, 0, 0.45098 )
-text = "Multiply By"
-valign = 1
-
-[node name="MultiplyPort" parent="." index="1" instance=ExtResource( 2 )]
+[node name="MultiplyPort" parent="." index="0" instance=ExtResource( 2 )]
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 32.0
-margin_top = 75.0
-margin_right = 333.0
+margin_left = 20.0
+margin_top = 50.0
+margin_right = 220.0
 margin_bottom = 100.0
+rect_min_size = Vector2( 200, 50 )
 hint_tooltip = "Fuck"
 HasInPort = true
 HasOutPort = true
@@ -58,20 +38,10 @@ step = 0.01
 value = 1.0
 allow_greater = true
 allow_lesser = true
+prefix = "x"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Label2" type="Label" parent="." index="2"]
-margin_left = 32.0
-margin_top = 102.0
-margin_right = 333.0
-margin_bottom = 251.0
-custom_colors/font_color = Color( 0.533867, 0.4816, 0.56, 1 )
-custom_colors/font_color_shadow = Color( 0, 0, 0, 0.45098 )
-text = "
-This is an example of the 2.0 node, You can use it as an example for custom nodes"
-autowrap = true
-
-[node name="TheCodeGoesHere" type="Node" parent="." index="3"]
+[node name="TheCodeGoesHere" type="Node" parent="." index="1"]
 script = ExtResource( 3 )

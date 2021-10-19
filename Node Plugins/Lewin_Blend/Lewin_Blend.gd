@@ -25,7 +25,7 @@ func _physics_process(delta):
 			var last_val = null
 			var a_end = len(A.OutValue)
 			for i in range(len(B.InValue)):
-				if i > a_end:
+				if i >= a_end:
 					A.OutValue[i] = A.OutValue[i] * last_val
 				else:
 					A.OutValue[i] = A.OutValue[i] * B.InValue[i]
