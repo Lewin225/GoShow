@@ -12,12 +12,10 @@ var needle_angle = 0
 func _ready():
 	pass # Replace with function body.
 
-func _process(delta):
-	needle_angle = clamp(needle_angle - 0.05, 0,1)
-	needle_angle = lerp(needle_angle, value, 0.9)
-	needle.rect_rotation = clamp((-90) + (needle_angle * 180), -90, 90)
+func _process(_delta):
+	needle.rect_rotation = clamp((-90) + (value * 180), -90, 90)
 
-func _physics_process(delta):
+func _physics_process(_delta):
 	if vu.InValue != null:
 		value = vu.InValue / scale.value
 		

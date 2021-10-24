@@ -1,14 +1,14 @@
 [gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Node Plugins/Lewin_SpriteNode/Lewin_SpriteNode.gd" type="Script" id=1]
-[ext_resource path="res://Node Plugins/Lewin_SpriteNode/ezgif.com-gif-maker (1).png" type="Texture" id=2]
+[ext_resource path="res://Node Plugins/Lewin_SpriteNode/ezgif-2-b31a2ba6b5db.png" type="Texture" id=2]
 [ext_resource path="res://GraphNodes/BaseShowNode.tscn" type="PackedScene" id=3]
 [ext_resource path="res://BaseNodeShowComponent.gd" type="Script" id=4]
 
 [node name="SpriteBox" instance=ExtResource( 3 )]
 margin_left = 1.0
 margin_right = 521.0
-margin_bottom = 450.0
+margin_bottom = 489.0
 title = "SpriteBox 2"
 slot/0/left_enabled = false
 slot/0/left_type = 0
@@ -22,12 +22,6 @@ slot/1/left_color = Color( 1, 1, 1, 1 )
 slot/1/right_enabled = false
 slot/1/right_type = 0
 slot/1/right_color = Color( 1, 1, 1, 1 )
-slot/2/left_enabled = false
-slot/2/left_type = 0
-slot/2/left_color = Color( 1, 1, 1, 1 )
-slot/2/right_enabled = false
-slot/2/right_type = 0
-slot/2/right_color = Color( 1, 1, 1, 1 )
 
 [node name="viewport_renderer" type="ViewportContainer" parent="." index="0"]
 margin_left = 20.0
@@ -52,9 +46,10 @@ render_target_update_mode = 3
 gui_disable_input = true
 
 [node name="Sprite" type="Sprite" parent="viewport_renderer/Viewport" index="0"]
+scale = Vector2( 3, 3 )
 texture = ExtResource( 2 )
 centered = false
-vframes = 6
+vframes = 2
 hframes = 5
 
 [node name="toggle_settings" type="Button" parent="." index="1"]
@@ -64,33 +59,39 @@ margin_right = 500.0
 margin_bottom = 449.0
 text = "Adv Settings"
 
-[node name="settings" type="AcceptDialog" parent="." index="2"]
+[node name="settings" type="AcceptDialog" parent="toggle_settings" index="0"]
 visible = true
-margin_left = 20.0
-margin_top = 451.0
-margin_right = 500.0
-margin_bottom = 951.0
-rect_min_size = Vector2( 0, 500 )
+margin_top = 39.0
+margin_right = 480.0
+margin_bottom = 433.0
 window_title = "Spritebox 2 Settings"
-
-[node name="set" type="VBoxContainer" parent="settings" index="3"]
-anchor_right = 1.0
-anchor_bottom = 1.0
+resizable = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Label" type="Label" parent="settings/set" index="0"]
-margin_right = 480.0
+[node name="set" type="VBoxContainer" parent="toggle_settings/settings" index="3"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 16.0
+margin_top = 16.0
+margin_right = -16.0
+margin_bottom = -69.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="toggle_settings/settings/set" index="0"]
+margin_right = 448.0
 margin_bottom = 25.0
 text = "Render Size"
 
-[node name="res" type="HBoxContainer" parent="settings/set" index="1"]
+[node name="res" type="HBoxContainer" parent="toggle_settings/settings/set" index="1"]
 margin_top = 33.0
-margin_right = 480.0
+margin_right = 448.0
 margin_bottom = 78.0
 
-[node name="x" type="SpinBox" parent="settings/set/res" index="0"]
+[node name="x" type="SpinBox" parent="toggle_settings/settings/set/res" index="0"]
 margin_right = 196.0
 margin_bottom = 45.0
 min_value = 1.0
@@ -98,7 +99,7 @@ max_value = 1920.0
 value = 500.0
 allow_greater = true
 
-[node name="y" type="SpinBox" parent="settings/set/res" index="1"]
+[node name="y" type="SpinBox" parent="toggle_settings/settings/set/res" index="1"]
 margin_left = 204.0
 margin_right = 400.0
 margin_bottom = 45.0
@@ -107,18 +108,18 @@ max_value = 1920.0
 value = 420.0
 allow_greater = true
 
-[node name="Label2" type="Label" parent="settings/set" index="2"]
+[node name="Label2" type="Label" parent="toggle_settings/settings/set" index="2"]
 margin_top = 86.0
-margin_right = 480.0
+margin_right = 448.0
 margin_bottom = 111.0
 text = "Sprite Offset"
 
-[node name="sprite_offset" type="HBoxContainer" parent="settings/set" index="3"]
+[node name="sprite_offset" type="HBoxContainer" parent="toggle_settings/settings/set" index="3"]
 margin_top = 119.0
-margin_right = 480.0
+margin_right = 448.0
 margin_bottom = 164.0
 
-[node name="x" type="SpinBox" parent="settings/set/sprite_offset" index="0"]
+[node name="x" type="SpinBox" parent="toggle_settings/settings/set/sprite_offset" index="0"]
 margin_right = 196.0
 margin_bottom = 45.0
 min_value = -1.0
@@ -126,7 +127,7 @@ max_value = 1.0
 allow_greater = true
 allow_lesser = true
 
-[node name="y" type="SpinBox" parent="settings/set/sprite_offset" index="1"]
+[node name="y" type="SpinBox" parent="toggle_settings/settings/set/sprite_offset" index="1"]
 margin_left = 204.0
 margin_right = 400.0
 margin_bottom = 45.0
@@ -135,30 +136,30 @@ max_value = 1.0
 allow_greater = true
 allow_lesser = true
 
-[node name="Label3" type="Label" parent="settings/set" index="4"]
+[node name="Label3" type="Label" parent="toggle_settings/settings/set" index="4"]
 margin_top = 172.0
-margin_right = 480.0
+margin_right = 448.0
 margin_bottom = 197.0
 text = "Render Settings"
 
-[node name="trans" type="CheckBox" parent="settings/set" index="5"]
+[node name="trans" type="CheckBox" parent="toggle_settings/settings/set" index="5"]
 margin_top = 205.0
-margin_right = 480.0
+margin_right = 448.0
 margin_bottom = 253.0
 text = "Render Trans"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="trans2" type="CheckBox" parent="settings/set" index="6"]
+[node name="trans2" type="CheckBox" parent="toggle_settings/settings/set" index="6"]
 margin_top = 261.0
-margin_right = 480.0
+margin_right = 448.0
 margin_bottom = 309.0
 text = "Clear after render"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="script" type="Node" parent="." index="3"]
+[node name="script" type="Node" parent="." index="2"]
 script = ExtResource( 1 )
-[connection signal="pressed" from="toggle_settings" to="settings" method="popup_centered"]
+[connection signal="pressed" from="toggle_settings" to="toggle_settings/settings" method="popup_centered"]

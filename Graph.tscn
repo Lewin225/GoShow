@@ -1,32 +1,23 @@
-[gd_scene load_steps=22 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://Node Plugins/Lewin_Multiply/Lewin_Multiply.tscn" type="PackedScene" id=1]
-[ext_resource path="res://Node Plugins/Lewin_Viewer/Lewin_Viewer.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Node Plugins/Lewin_Counter/Lewin_Counter.tscn" type="PackedScene" id=2]
 [ext_resource path="res://GraphEdit.gd" type="Script" id=3]
 [ext_resource path="res://Node Plugins/Lewin_Midi/Lewin_Midi.tscn" type="PackedScene" id=4]
-[ext_resource path="res://Node Plugins/Lewin_DemoNode/lewin_DemoNode.tscn" type="PackedScene" id=5]
-[ext_resource path="res://Node Plugins/Lewin_OpenPixelControl/Lewin_OpenPixelControl.tscn" type="PackedScene" id=6]
-[ext_resource path="res://Node Plugins/Lewin_Vector3/Lewin_Vector3.tscn" type="PackedScene" id=7]
-[ext_resource path="res://Node Plugins/Lewin_Vector3Array/Lewin_Vector3Array.tscn" type="PackedScene" id=8]
-[ext_resource path="res://Node Plugins/Lewin_MikuVU/Lewin_MikuVU.tscn" type="PackedScene" id=9]
-[ext_resource path="res://STYLE_BaseShowNode_TEST.tres" type="StyleBox" id=10]
+[ext_resource path="res://Node Plugins/Lewin_Wrap/Lewin_Wrap.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Node Plugins/Lewin_Viewer/Lewin_Viewer.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Resources/JetBrainsMono[wght].ttf" type="DynamicFontData" id=11]
-[ext_resource path="res://Node Plugins/Lewin_Sub/Lewin_Sub.tscn" type="PackedScene" id=12]
-[ext_resource path="res://Node Plugins/Lewin_Blend/Lewin_Blend.tscn" type="PackedScene" id=13]
-[ext_resource path="res://Node Plugins/Lewin_Color/Lewin_Color.tscn" type="PackedScene" id=14]
-[ext_resource path="res://Node Plugins/Lewin_Lerp/Lewin_Lerp.tscn" type="PackedScene" id=15]
 [ext_resource path="res://Node Plugins/Lewin_SpriteNode/Lewin_SpriteNode.tscn" type="PackedScene" id=16]
-[ext_resource path="res://Node Plugins/Lewin_Texture2DPreview/Lewin_Texture2DPreview.tscn" type="PackedScene" id=17]
 
-[sub_resource type="DynamicFont" id=2]
+[sub_resource type="DynamicFont" id=1]
 use_mipmaps = true
 use_filter = true
 font_data = ExtResource( 11 )
 
-[sub_resource type="StyleBoxFlat" id=3]
+[sub_resource type="StyleBoxFlat" id=2]
 bg_color = Color( 0.0941176, 0.0941176, 0.0941176, 1 )
 
-[sub_resource type="Theme" id=4]
+[sub_resource type="Theme" id=3]
 Label/colors/font_color = Color( 1, 1, 1, 1 )
 Label/colors/font_color_shadow = Color( 0, 0, 0, 0 )
 Label/colors/font_outline_modulate = Color( 1, 1, 1, 1 )
@@ -34,15 +25,9 @@ Label/constants/line_spacing = 6
 Label/constants/shadow_as_outline = 0
 Label/constants/shadow_offset_x = 2
 Label/constants/shadow_offset_y = 2
-Label/fonts/font = SubResource( 2 )
+Label/fonts/font = SubResource( 1 )
 Label/styles/normal = null
-Panel/styles/panel = SubResource( 3 )
-
-[sub_resource type="DynamicFont" id=1]
-size = 31
-use_mipmaps = true
-use_filter = true
-font_data = ExtResource( 11 )
+Panel/styles/panel = SubResource( 2 )
 
 [node name="Control" type="Control"]
 anchor_right = 1.0
@@ -54,7 +39,7 @@ __meta__ = {
 [node name="GraphEdit" type="GraphEdit" parent="."]
 anchor_right = 1.0
 anchor_bottom = 1.0
-theme = SubResource( 4 )
+theme = SubResource( 3 )
 custom_constants/port_grab_distance_vertical = 20
 custom_constants/port_grab_distance_horizontal = 40
 right_disconnects = true
@@ -64,263 +49,58 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Viewer" parent="GraphEdit" instance=ExtResource( 2 )]
-margin_left = 1125.0
-margin_top = 562.5
-margin_right = 1533.0
-margin_bottom = 830.5
-rect_scale = Vector2( 0.75, 0.75 )
-mouse_filter = 1
-custom_styles/selectedframe = ExtResource( 10 )
-custom_styles/defaultfocus = ExtResource( 10 )
-custom_fonts/title_font = SubResource( 1 )
-custom_colors/close_color = Color( 0, 0, 0, 1 )
-custom_colors/title_color = Color( 0.686275, 0.686275, 0.686275, 1 )
-custom_colors/resizer_color = Color( 0.686275, 0.686275, 0.686275, 1 )
-offset = Vector2( 1500, 750 )
-resizable = false
-
-[node name="Multiply Node2" parent="GraphEdit" instance=ExtResource( 1 )]
-margin_left = 375.0
-margin_top = 375.0
-margin_right = 615.0
-margin_bottom = 542.0
-rect_scale = Vector2( 0.75, 0.75 )
-mouse_filter = 1
-custom_styles/selectedframe = ExtResource( 10 )
-custom_styles/defaultfocus = ExtResource( 10 )
-custom_fonts/title_font = SubResource( 1 )
-custom_colors/close_color = Color( 0, 0, 0, 1 )
-custom_colors/title_color = Color( 0.686275, 0.686275, 0.686275, 1 )
-custom_colors/resizer_color = Color( 0.686275, 0.686275, 0.686275, 1 )
-offset = Vector2( 500, 500 )
-resizable = false
-
-[node name="Multiply Node3" parent="GraphEdit" instance=ExtResource( 1 )]
-margin_left = 375.0
-margin_top = 375.0
-margin_right = 615.0
-margin_bottom = 542.0
-rect_scale = Vector2( 0.75, 0.75 )
-mouse_filter = 1
-custom_styles/selectedframe = ExtResource( 10 )
-custom_styles/defaultfocus = ExtResource( 10 )
-custom_fonts/title_font = SubResource( 1 )
-custom_colors/close_color = Color( 0, 0, 0, 1 )
-custom_colors/title_color = Color( 0.686275, 0.686275, 0.686275, 1 )
-custom_colors/resizer_color = Color( 0.686275, 0.686275, 0.686275, 1 )
-offset = Vector2( 500, 500 )
-resizable = false
-
 [node name="MidiNode" parent="GraphEdit" instance=ExtResource( 4 )]
-margin_left = 562.5
-margin_top = 562.5
-margin_right = 916.5
-margin_bottom = 1001.5
+margin_left = 0.0
+margin_right = 330.0
+margin_bottom = 421.0
 rect_scale = Vector2( 0.75, 0.75 )
 mouse_filter = 1
-custom_styles/selectedframe = ExtResource( 10 )
-custom_styles/defaultfocus = ExtResource( 10 )
-custom_fonts/title_font = SubResource( 1 )
-custom_colors/close_color = Color( 0, 0, 0, 1 )
-custom_colors/title_color = Color( 0.686275, 0.686275, 0.686275, 1 )
-custom_colors/resizer_color = Color( 0.686275, 0.686275, 0.686275, 1 )
-offset = Vector2( 750, 750 )
-resizable = false
 
 [node name="MidiNode2" parent="GraphEdit" instance=ExtResource( 4 )]
 margin_left = 0.0
-margin_top = 562.5
-margin_right = 354.0
-margin_bottom = 1001.5
-rect_scale = Vector2( 0.75, 0.75 )
-mouse_filter = 1
-custom_styles/selectedframe = ExtResource( 10 )
-custom_styles/defaultfocus = ExtResource( 10 )
-custom_fonts/title_font = SubResource( 1 )
-custom_colors/close_color = Color( 0, 0, 0, 1 )
-custom_colors/title_color = Color( 0.686275, 0.686275, 0.686275, 1 )
-custom_colors/resizer_color = Color( 0.686275, 0.686275, 0.686275, 1 )
-offset = Vector2( 0, 750 )
-resizable = false
-
-[node name="DemoNode" parent="GraphEdit" instance=ExtResource( 5 )]
-visible = false
-margin_left = 0.0
-margin_right = 250.0
-margin_bottom = 148.0
-rect_scale = Vector2( 0.75, 0.75 )
-mouse_filter = 1
-custom_styles/selectedframe = ExtResource( 10 )
-custom_styles/defaultfocus = ExtResource( 10 )
-custom_fonts/title_font = SubResource( 1 )
-custom_colors/close_color = Color( 0, 0, 0, 1 )
-custom_colors/title_color = Color( 0.686275, 0.686275, 0.686275, 1 )
-custom_colors/resizer_color = Color( 0.686275, 0.686275, 0.686275, 1 )
-resizable = false
-
-[node name="Open Pixel Control" parent="GraphEdit" instance=ExtResource( 6 )]
-margin_left = 1125.0
-margin_top = 375.0
-margin_right = 1552.0
-margin_bottom = 537.0
-rect_scale = Vector2( 0.75, 0.75 )
-mouse_filter = 1
-custom_styles/selectedframe = ExtResource( 10 )
-custom_styles/defaultfocus = ExtResource( 10 )
-custom_fonts/title_font = SubResource( 1 )
-custom_colors/close_color = Color( 0, 0, 0, 1 )
-custom_colors/title_color = Color( 0.686275, 0.686275, 0.686275, 1 )
-custom_colors/resizer_color = Color( 0.686275, 0.686275, 0.686275, 1 )
-offset = Vector2( 1500, 500 )
-resizable = false
-
-[node name="Vector3" parent="GraphEdit" instance=ExtResource( 7 )]
-margin_left = 375.0
-margin_top = 562.5
-margin_right = 593.0
-margin_bottom = 731.5
-rect_scale = Vector2( 0.75, 0.75 )
-mouse_filter = 1
-custom_styles/selectedframe = ExtResource( 10 )
-custom_styles/defaultfocus = ExtResource( 10 )
-custom_fonts/title_font = SubResource( 1 )
-custom_colors/close_color = Color( 0, 0, 0, 1 )
-custom_colors/title_color = Color( 0.686275, 0.686275, 0.686275, 1 )
-custom_colors/resizer_color = Color( 0.686275, 0.686275, 0.686275, 1 )
-offset = Vector2( 500, 750 )
-resizable = false
-
-[node name="Vector3(2)" parent="GraphEdit" instance=ExtResource( 7 )]
-margin_left = 375.0
-margin_top = 562.5
-margin_right = 593.0
-margin_bottom = 731.5
-rect_scale = Vector2( 0.75, 0.75 )
-mouse_filter = 1
-custom_styles/selectedframe = ExtResource( 10 )
-custom_styles/defaultfocus = ExtResource( 10 )
-custom_fonts/title_font = SubResource( 1 )
-custom_colors/close_color = Color( 0, 0, 0, 1 )
-custom_colors/title_color = Color( 0.686275, 0.686275, 0.686275, 1 )
-custom_colors/resizer_color = Color( 0.686275, 0.686275, 0.686275, 1 )
-offset = Vector2( 500, 750 )
-resizable = false
-
-[node name="Vector 3 Array" parent="GraphEdit" instance=ExtResource( 8 )]
-margin_left = 375.0
-margin_top = 75.0
-margin_right = 707.0
-margin_bottom = 242.0
-rect_scale = Vector2( 0.75, 0.75 )
-mouse_filter = 1
-custom_styles/selectedframe = ExtResource( 10 )
-custom_styles/defaultfocus = ExtResource( 10 )
-custom_fonts/title_font = SubResource( 1 )
-custom_colors/close_color = Color( 0, 0, 0, 1 )
-custom_colors/title_color = Color( 0.686275, 0.686275, 0.686275, 1 )
-custom_colors/resizer_color = Color( 0.686275, 0.686275, 0.686275, 1 )
-offset = Vector2( 500, 100 )
-resizable = false
-
-[node name="Vector 3 Array2" parent="GraphEdit" instance=ExtResource( 8 )]
-margin_left = 375.0
-margin_top = 75.0
-margin_right = 707.0
-margin_bottom = 242.0
-rect_scale = Vector2( 0.75, 0.75 )
-mouse_filter = 1
-custom_styles/selectedframe = ExtResource( 10 )
-custom_styles/defaultfocus = ExtResource( 10 )
-custom_fonts/title_font = SubResource( 1 )
-custom_colors/close_color = Color( 0, 0, 0, 1 )
-custom_colors/title_color = Color( 0.686275, 0.686275, 0.686275, 1 )
-custom_colors/resizer_color = Color( 0.686275, 0.686275, 0.686275, 1 )
-offset = Vector2( 500, 100 )
-resizable = false
-
-[node name="MikuMeter" parent="GraphEdit" instance=ExtResource( 9 )]
-margin_left = 1125.0
-margin_right = 1590.0
-margin_bottom = 387.0
-rect_scale = Vector2( 0.75, 0.75 )
-mouse_filter = 1
-custom_styles/selectedframe = ExtResource( 10 )
-custom_styles/defaultfocus = ExtResource( 10 )
-custom_fonts/title_font = SubResource( 1 )
-custom_colors/close_color = Color( 0, 0, 0, 1 )
-custom_colors/title_color = Color( 0.686275, 0.686275, 0.686275, 1 )
-custom_colors/resizer_color = Color( 0.686275, 0.686275, 0.686275, 1 )
-offset = Vector2( 1500, 0 )
-resizable = false
-
-[node name="Subtract" parent="GraphEdit" instance=ExtResource( 12 )]
-margin_left = 375.0
-margin_top = 375.0
-margin_right = 615.0
-margin_bottom = 569.0
-rect_scale = Vector2( 0.75, 0.75 )
-mouse_filter = 1
-offset = Vector2( 500, 500 )
-
-[node name="Blend" parent="GraphEdit" instance=ExtResource( 13 )]
-margin_left = 0.0
-margin_right = 290.0
-margin_bottom = 251.0
+margin_right = 330.0
+margin_bottom = 421.0
 rect_scale = Vector2( 0.75, 0.75 )
 mouse_filter = 1
 
-[node name="Color Picker" parent="GraphEdit" instance=ExtResource( 14 )]
-margin_left = 0.0
-margin_top = 0.0
-margin_right = 282.0
-margin_bottom = 197.0
-rect_scale = Vector2( 0.75, 0.75 )
-mouse_filter = 1
-
-[node name="Lerp" parent="GraphEdit" instance=ExtResource( 15 )]
+[node name="Wrap" parent="GraphEdit" instance=ExtResource( 5 )]
 margin_left = 0.0
 margin_right = 236.0
-margin_bottom = 162.0
+margin_bottom = 209.0
 rect_scale = Vector2( 0.75, 0.75 )
 mouse_filter = 1
 
-[node name="SpriteNode" parent="GraphEdit" instance=ExtResource( 16 )]
-margin_left = 675.0
-margin_right = 1215.0
-margin_bottom = 991.0
-rect_scale = Vector2( 0.75, 0.75 )
-mouse_filter = 1
-offset = Vector2( 900, 0 )
-
-[node name="SpriteNode2" parent="GraphEdit" instance=ExtResource( 16 )]
-margin_left = 675.0
-margin_right = 1215.0
-margin_bottom = 991.0
-rect_scale = Vector2( 0.75, 0.75 )
-mouse_filter = 1
-offset = Vector2( 900, 0 )
-
-[node name="SpriteNode3" parent="GraphEdit" instance=ExtResource( 16 )]
-margin_left = 675.0
-margin_right = 1215.0
-margin_bottom = 991.0
-rect_scale = Vector2( 0.75, 0.75 )
-mouse_filter = 1
-offset = Vector2( 900, 0 )
-
-[node name="SpriteNode4" parent="GraphEdit" instance=ExtResource( 16 )]
-margin_left = 675.0
-margin_right = 1215.0
-margin_bottom = 991.0
-rect_scale = Vector2( 0.75, 0.75 )
-mouse_filter = 1
-offset = Vector2( 900, 0 )
-
-[node name="Texture2D Preview" parent="GraphEdit" instance=ExtResource( 17 )]
+[node name="Multiply Node" parent="GraphEdit" instance=ExtResource( 1 )]
 margin_left = 0.0
-margin_right = 440.0
-margin_bottom = 390.0
+margin_right = 240.0
+margin_bottom = 167.0
+rect_scale = Vector2( 0.75, 0.75 )
+mouse_filter = 1
+
+[node name="Multiply Node2" parent="GraphEdit" instance=ExtResource( 1 )]
+margin_left = 0.0
+margin_right = 240.0
+margin_bottom = 167.0
+rect_scale = Vector2( 0.75, 0.75 )
+mouse_filter = 1
+
+[node name="Counter" parent="GraphEdit" instance=ExtResource( 2 )]
+margin_left = 0.0
+margin_right = 208.0
+margin_bottom = 169.0
+rect_scale = Vector2( 0.75, 0.75 )
+mouse_filter = 1
+
+[node name="Viewer" parent="GraphEdit" instance=ExtResource( 6 )]
+margin_left = 0.0
+margin_right = 390.0
+margin_bottom = 241.0
+rect_scale = Vector2( 0.75, 0.75 )
+mouse_filter = 1
+
+[node name="SpriteBox" parent="GraphEdit" instance=ExtResource( 16 )]
+margin_left = 0.0
+margin_right = 520.0
 rect_scale = Vector2( 0.75, 0.75 )
 mouse_filter = 1
 [connection signal="connection_request" from="GraphEdit" to="GraphEdit" method="_on_GraphEdit_connection_request"]

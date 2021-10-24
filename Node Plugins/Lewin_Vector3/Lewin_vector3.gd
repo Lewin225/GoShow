@@ -10,7 +10,7 @@ var Vec3 = Vector3.ZERO
 func _ready():
 	Vec3 = Vector3.ZERO
 
-func _physics_process(delta):
+func _physics_process(_delta):
 	#Check any ports are connected, if not output null
 	if X.InValue != null or Y.InValue != null or Z.InValue !=null:
 		

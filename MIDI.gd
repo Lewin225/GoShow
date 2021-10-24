@@ -10,8 +10,3 @@ extends Node
 func _ready():
 	OS.open_midi_inputs ()
 	print(OS.get_connected_midi_inputs())
-
-
-func _unhandled_input(event):
-	pass
-

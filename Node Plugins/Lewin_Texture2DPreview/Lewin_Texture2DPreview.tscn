@@ -4,8 +4,8 @@
 [ext_resource path="res://GraphNodes/BaseShowNode.tscn" type="PackedScene" id=2]
 [ext_resource path="res://GraphNodes/BaseNodeShowComponent.tscn" type="PackedScene" id=3]
 
-[node name="Texture2D Preview" instance=ExtResource( 2 )]
-title = "Texture2D Preview"
+[node name="Tex2D Preview" instance=ExtResource( 2 )]
+title = "Tex2D Preview"
 slot/0/left_enabled = false
 slot/0/left_type = 0
 slot/0/left_color = Color( 1, 1, 1, 1 )
@@ -38,7 +38,9 @@ __meta__ = {
 anchor_right = 1.0
 anchor_bottom = 1.0
 rect_min_size = Vector2( 250, 250 )
-stretch_mode = 6
+expand = true
+stretch_mode = 5
+flip_v = true
 __meta__ = {
 "_edit_use_anchors_": false
 }

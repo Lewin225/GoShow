@@ -8,6 +8,7 @@ func _on_GraphEdit_connection_request(from, from_slot, to, to_slot):
 	print("Connecting node ", from,"Port[",from_slot, "]", " to ", to, "Port[",to_slot, "]")
 	if f.set_outport_connection(t) and t.set_inport_connection(f):
 		# This is just the visual for the line, Above connects the nodes
+		#warning-ignore:return_value_discarded
 		connect_node(from, from_slot, to, to_slot)#
 	else:
 		assert(false)

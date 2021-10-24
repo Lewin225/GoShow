@@ -13,7 +13,7 @@ func _ready():
 	pass
 
 
-func _physics_process(delta):
+func _physics_process(_delta):
 	#print(vec3.InValue)
 	if length.InValue != null:
 		n = length.InValue
@@ -25,7 +25,7 @@ func _physics_process(delta):
 
 	if vec3.InValue != null:
 		a = []
-		for i in range(n):
+		for __ in range(n):
 			a.append(vec3.InValue)
 		vec3.OutValue = a
 		#print(vec3.InValue, vec3.OutValue)

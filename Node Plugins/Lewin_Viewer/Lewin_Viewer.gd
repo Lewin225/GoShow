@@ -6,9 +6,9 @@ onready var bool_label = $"../bool_label"
 onready var float_label = $"../float_label"
 onready var vec3 = $"../vec3"
 onready var vec3_label = $"../vec_label"
-onready var output = $"../float/output"
+#onready var output = $"../float/output"
 
-func _physics_process(delta):
+func _physics_process(_delta):
 
 	if floatin.InValue:
 		float_label.text = str(floatin.InValue)

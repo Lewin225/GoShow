@@ -17,7 +17,19 @@ var _slots = [] # Don't use this, It's just for getting the port InDeX right
 var in_ports = []
 var out_ports = []
 
-func get_save_data():
+func load_store(key):
+	if store.has(key):
+		return store[key]
+	else:
+		return null
+		
+func save_store(key, value):
+	store[key] = value
+	
+func store_populated():
+	return len(store) > 0
+
+func _get_raw_save_data():
 	return {
 		'nodeType':self.filename,
 		'sceneNodeId':self.name,
@@ -29,13 +41,15 @@ func get_save_data():
 		'notes':notes,
 	}
 	
-func load_save_data(data):
+
+func _load_save_data(data):
 	nodeType = data['nodeType']
 	store = data['store']
 	x_pos = data['x_pos']
 	y_pos = data['y_pos']
 	nodeType = data['type']
 	_ready()
+	
 	
 func get_outport_for_slot(idx):
 	return out_ports[idx]
@@ -44,7 +58,7 @@ func get_inport_for_slot(idx):
 	return in_ports[idx]
 	
 func _ready():
-	print(get_save_data())
+	#print(self.name, " ready")
 	# Work out which children are ports
 	# We still want to keep them all so the correct index
 	# can be calculated when setting up the "slots" for graphnode

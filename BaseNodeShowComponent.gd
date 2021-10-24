@@ -28,7 +28,7 @@ func _ready():
 #		OutValue = []
 var i = 0
 
-func _physics_process(delta):
+func _physics_process(_delta):
 	if InPort != null:
 		self.InValue = InPort.OutValue
 	

@@ -23,7 +23,7 @@ func _ready():
 	client = get_client()
 	get_connection(address.text)
 	
-func _physics_process(delta):
+func _physics_process(_delta):
 	if input.InPort != null and input.InValue != null:
 		pixels = input.InValue
 		send_pixels()
@@ -45,7 +45,7 @@ func get_connection(address_and_port):
 		var addr = address_and_port.split(":")[0]
 		var port = address_and_port.split(":")[1]
 		print("OPC connection attempt")
-		var con = client.connect_to_host(addr, int(port))
+		client.connect_to_host(addr, int(port))
 		if client.is_connected_to_host():
 			print("OPC connection ok")
 			packetpeer = PacketPeerStream.new()
@@ -69,10 +69,11 @@ func send_pixels():
 	# TODO Use pool byte array?
 	# See http://openpixelcontrol.org/
 	
+	#warning-ignore:integer_division
 	var high_byte = int(len(pixels)*3 / 256)
 	var low_byte = (len(pixels)*3) % 256
 	
-	var pool = PoolByteArray()
+	var pool = PoolByteArray() #Todo init at correct size
 		
 	pool.append(0) # Channel
 	pool.append(0) # Command
@@ -88,9 +89,6 @@ func send_pixels():
 	
 	_send(pool)
 	last_pixels = pixels
-	
-
-
 
 func _on_reconnect_pressed():
 	drop_connection()

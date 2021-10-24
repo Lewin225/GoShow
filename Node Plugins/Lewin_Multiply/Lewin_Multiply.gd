@@ -7,7 +7,7 @@ onready var manual = $"../multiplier/manual"
 func _ready():
 	multiply.OutValue = 0
 
-func _physics_process(delta):
+func _physics_process(_delta):
 	if multiplier.InValue != null:
 		manual.value = multiplier.InValue
 	

@@ -14,7 +14,7 @@ func _ready():
 	mode.add_item("Add")
 
 
-func _physics_process(delta):
+func _physics_process(_delta):
 	
 	if A.InValue != null and B.InValue != null:
 		if mode.selected == 0: # Append
