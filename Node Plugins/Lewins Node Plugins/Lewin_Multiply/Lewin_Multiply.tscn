@@ -1,0 +1,82 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Bases/Base Node.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Bases/Base Node Port.tscn" type="PackedScene" id=2]
+
+[sub_resource type="GDScript" id=1]
+script/source = "extends Node
+
+onready var multiply = $\"../MultiplyPort\"
+onready var multiplier = $\"../multiplier\"
+onready var manual = $\"../multiplier/manual\"
+
+func _ready():
+	multiply.OutValue = 0
+
+func _physics_process(_delta):
+	if multiplier.InValue != null:
+		manual.value = multiplier.InValue
+	
+	if multiply.InValue:
+		multiply.OutValue = (multiply.InValue * manual.value)
+"
+
+[node name="Multiply Node" instance=ExtResource( 1 )]
+margin_left = 1.0
+margin_right = 241.0
+margin_bottom = 140.0
+rect_min_size = Vector2( 0, 0 )
+title = "Multiply"
+slot/0/left_enabled = false
+slot/0/left_type = 0
+slot/0/left_color = Color( 1, 1, 1, 1 )
+slot/0/right_enabled = false
+slot/0/right_type = 0
+slot/0/right_color = Color( 1, 1, 1, 1 )
+slot/1/left_enabled = false
+slot/1/left_type = 0
+slot/1/left_color = Color( 1, 1, 1, 1 )
+slot/1/right_enabled = false
+slot/1/right_type = 0
+slot/1/right_color = Color( 1, 1, 1, 1 )
+
+[node name="MultiplyPort" parent="." index="0" instance=ExtResource( 2 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 20.0
+margin_top = 50.0
+margin_right = 220.0
+margin_bottom = 100.0
+rect_min_size = Vector2( 200, 50 )
+hint_tooltip = "Fuck"
+HasInPort = true
+HasOutPort = true
+
+[node name="multiplier" parent="." index="1" instance=ExtResource( 2 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 20.0
+margin_top = 102.0
+margin_right = 220.0
+margin_bottom = 127.0
+HasInPort = true
+
+[node name="manual" type="SpinBox" parent="multiplier" index="0"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -100.0
+margin_right = 100.0
+margin_bottom = 45.0
+min_value = -999.0
+max_value = 999.0
+step = 0.01
+value = 1.0
+allow_greater = true
+allow_lesser = true
+prefix = "x"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TheCodeGoesHere" type="Node" parent="." index="2"]
+script = SubResource( 1 )

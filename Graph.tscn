@@ -1,15 +1,20 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=19 format=2]
 
-[ext_resource path="res://Node Plugins/Lewis Node Plugins/Lewin_Multiply/Lewin_Multiply.tscn" type="PackedScene" id=1]
-[ext_resource path="res://Node Plugins/Lewis Node Plugins/Lewin_Counter/Lewin_Counter.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Node Plugins/Lewins Node Plugins/Lewin_Multiply/Lewin_Multiply.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Node Plugins/Lewins Node Plugins/Lewin_Counter/Lewin_Counter.tscn" type="PackedScene" id=2]
 [ext_resource path="res://GraphEdit.gd" type="Script" id=3]
-[ext_resource path="res://Node Plugins/Lewis Node Plugins/Lewin_Midi/Lewin_Midi.tscn" type="PackedScene" id=4]
-[ext_resource path="res://Node Plugins/Lewis Node Plugins/Lewin_Wrap/Lewin_Wrap.tscn" type="PackedScene" id=5]
-[ext_resource path="res://Node Plugins/Lewis Node Plugins/Lewin_Viewer/Lewin_Viewer.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Node Plugins/Lewins Node Plugins/Lewin_Midi/Lewin_Midi.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Node Plugins/Lewins Node Plugins/Lewin_Wrap/Lewin_Wrap.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Node Plugins/Lewins Node Plugins/Lewin_Viewer/Lewin_Viewer.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Node Plugins/Lewins Node Plugins/Lewin_MikuVU/Lewin_MikuVU.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Node Plugins/Lewins Node Plugins/Lewin_Color/Lewin_Color.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Node Plugins/Lewins Node Plugins/Lewin_Lerp/Lewin_Lerp.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Node Plugins/Lewins Node Plugins/Lewin_Texture2DPreview/Lewin_Texture2DPreview.tscn" type="PackedScene" id=10]
 [ext_resource path="res://Resources/JetBrainsMono[wght].ttf" type="DynamicFontData" id=11]
-[ext_resource path="res://Node Plugins/Lewis Node Plugins/Lewin_SpriteNode/Lewin_SpriteNode.tscn" type="PackedScene" id=16]
-
-
+[ext_resource path="res://Node Plugins/Lewins Node Plugins/Lewin_Vector3/Lewin_Vector3.tscn" type="PackedScene" id=12]
+[ext_resource path="res://Node Plugins/Lewins Node Plugins/Lewin_OpenPixelControl/Lewin_OpenPixelControl.tscn" type="PackedScene" id=13]
+[ext_resource path="res://Node Plugins/Lewins Node Plugins/Lewin_Vector3Array/Lewin_Vector3Array.tscn" type="PackedScene" id=14]
+[ext_resource path="res://Node Plugins/Lewins Node Plugins/Lewin_SpriteNode/Lewin_SpriteNode.tscn" type="PackedScene" id=16]
 
 [sub_resource type="DynamicFont" id=1]
 use_mipmaps = true
@@ -86,6 +91,13 @@ margin_bottom = 167.0
 rect_scale = Vector2( 0.75, 0.75 )
 mouse_filter = 1
 
+[node name="Multiply Node3" parent="GraphEdit" instance=ExtResource( 1 )]
+margin_left = 0.0
+margin_right = 240.0
+margin_bottom = 167.0
+rect_scale = Vector2( 0.75, 0.75 )
+mouse_filter = 1
+
 [node name="Counter" parent="GraphEdit" instance=ExtResource( 2 )]
 margin_left = 0.0
 margin_right = 208.0
@@ -103,6 +115,56 @@ mouse_filter = 1
 [node name="SpriteBox" parent="GraphEdit" instance=ExtResource( 16 )]
 margin_left = 0.0
 margin_right = 520.0
+rect_scale = Vector2( 0.75, 0.75 )
+mouse_filter = 1
+
+[node name="MikuMeter" parent="GraphEdit" instance=ExtResource( 7 )]
+margin_left = 0.0
+margin_right = 463.37
+margin_bottom = 387.0
+rect_scale = Vector2( 0.75, 0.75 )
+mouse_filter = 1
+
+[node name="Color Picker" parent="GraphEdit" instance=ExtResource( 8 )]
+margin_left = 0.0
+margin_top = 0.0
+margin_right = 282.0
+margin_bottom = 197.0
+rect_scale = Vector2( 0.75, 0.75 )
+mouse_filter = 1
+
+[node name="Lerp" parent="GraphEdit" instance=ExtResource( 9 )]
+margin_left = 0.0
+margin_right = 236.0
+margin_bottom = 162.0
+rect_scale = Vector2( 0.75, 0.75 )
+mouse_filter = 1
+
+[node name="Tex2D Preview" parent="GraphEdit" instance=ExtResource( 10 )]
+margin_left = 0.0
+margin_right = 440.0
+margin_bottom = 390.0
+rect_scale = Vector2( 0.75, 0.75 )
+mouse_filter = 1
+
+[node name="Vector3" parent="GraphEdit" instance=ExtResource( 12 )]
+margin_left = 0.0
+margin_right = 210.0
+margin_bottom = 169.0
+rect_scale = Vector2( 0.75, 0.75 )
+mouse_filter = 1
+
+[node name="Vector 3 Array" parent="GraphEdit" instance=ExtResource( 14 )]
+margin_left = 0.0
+margin_right = 318.0
+margin_bottom = 167.0
+rect_scale = Vector2( 0.75, 0.75 )
+mouse_filter = 1
+
+[node name="Open Pixel Control" parent="GraphEdit" instance=ExtResource( 13 )]
+margin_left = 0.0
+margin_right = 408.0
+margin_bottom = 162.0
 rect_scale = Vector2( 0.75, 0.75 )
 mouse_filter = 1
 [connection signal="connection_request" from="GraphEdit" to="GraphEdit" method="_on_GraphEdit_connection_request"]

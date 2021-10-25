@@ -1,0 +1,114 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Bases/Base Node Port.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Bases/Base Node.tscn" type="PackedScene" id=3]
+
+[sub_resource type="GDScript" id=1]
+script/source = "extends \"res://Bases/Base Node.gd\"
+
+onready var boolin = $bool
+onready var floatin = $float
+onready var label = $float/Label
+onready var reset = $reset
+
+
+var last_float = -1
+var last_bool = false
+
+func _physics_process(delta):
+	if floatin.InValue != null:
+		if floatin.OutValue == null:
+			floatin.OutValue = 0
+			
+		if floatin.InValue != last_float:
+			floatin.OutValue += 1
+			last_float = floatin.InValue
+			
+	if boolin.InValue !=  null:
+		if boolin.InValue != last_bool and boolin.InValue == false:
+			floatin.OutValue += 1
+			last_bool = boolin.InValue
+	
+	if reset.InValue:
+		floatin.OutValue = null
+		
+	label.text = str(floatin.OutValue)
+	
+"
+
+[node name="Counter" instance=ExtResource( 3 )]
+title = "Counter"
+slot/0/left_enabled = false
+slot/0/left_type = 0
+slot/0/left_color = Color( 1, 1, 1, 1 )
+slot/0/right_enabled = false
+slot/0/right_type = 0
+slot/0/right_color = Color( 1, 1, 1, 1 )
+slot/1/left_enabled = false
+slot/1/left_type = 0
+slot/1/left_color = Color( 1, 1, 1, 1 )
+slot/1/right_enabled = false
+slot/1/right_type = 0
+slot/1/right_color = Color( 1, 1, 1, 1 )
+slot/2/left_enabled = false
+slot/2/left_type = 0
+slot/2/left_color = Color( 1, 1, 1, 1 )
+slot/2/right_enabled = false
+slot/2/right_type = 0
+slot/2/right_color = Color( 1, 1, 1, 1 )
+script = SubResource( 1 )
+
+[node name="bool" parent="." index="0" instance=ExtResource( 2 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 20.0
+margin_top = 50.0
+margin_right = 188.0
+margin_bottom = 75.0
+InType = 1
+HasInPort = true
+
+[node name="Label" type="Label" parent="bool" index="0"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+text = "-Increment"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="float" parent="." index="1" instance=ExtResource( 2 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 20.0
+margin_top = 77.0
+margin_right = 188.0
+margin_bottom = 102.0
+HasInPort = true
+HasOutPort = true
+
+[node name="Label" type="Label" parent="float" index="0"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+text = "-Count-"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="reset" parent="." index="2" instance=ExtResource( 2 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 20.0
+margin_top = 104.0
+margin_right = 188.0
+margin_bottom = 129.0
+InType = 1
+HasInPort = true
+
+[node name="Label" type="Label" parent="reset" index="0"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+text = "-Reset"
+__meta__ = {
+"_edit_use_anchors_": false
+}
