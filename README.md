@@ -19,9 +19,7 @@ Originaly designed to replace a python <-> Traktor Pro 3 bridge script, But is n
 	* *Desktop Window* - Render your Texture2D nodes to another window - Requires godot4 (Partial implementation currently)
 	
 
-![Traktor_yDsr8lqymS](https://user-images.githubusercontent.com/13208949/138683954-62c8ad3b-0ce6-4e5a-8790-dc5fe319a682.png)
-
-
+![Godot_v3 2 3-stable_win64_oiBCTCErVF](https://user-images.githubusercontent.com/13208949/138689351-095004bc-5d06-4cd2-9070-1b98a7c65e8c.png)
 
 
 # Code of Conduct
