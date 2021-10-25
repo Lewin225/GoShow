@@ -2,6 +2,22 @@
 (Working title)
 Please don't use this, It's not even close to stable or ready for use
 
+Originaly designed to replace a python <-> Traktor Pro 3 bridge script, But is now a graph editor for pretty much any IO manipulation
+
+Current / *planned* support
+Input
+	Keyboard
+	Game Controlers / Joysticks
+	Midi	
+	*dll hooking*
+
+Output
+	*Midi* - Not supported in godot yet, will either wait for implementation or write from scratch
+	*Virtual key Presses*
+	Open Pixel Control - Mostly functional, Data format is not correct but still works
+	*Desktop Window* - Render your Texture2D nodes to another window - Requires godot4 (Partial implementation currently)
+	
+
 ![Traktor_yDsr8lqymS](https://user-images.githubusercontent.com/13208949/138683954-62c8ad3b-0ce6-4e5a-8790-dc5fe319a682.png)
 
 
