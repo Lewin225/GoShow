@@ -1,3 +1,12 @@
+# GoShow
+(Working title)
+Please don't use this, It's not even close to stable or ready for use
+
+![Traktor_yDsr8lqymS](https://user-images.githubusercontent.com/13208949/138683954-62c8ad3b-0ce6-4e5a-8790-dc5fe319a682.png)
+
+
+
+
 # Code of Conduct
 
 This program is FEUDALWARE.
