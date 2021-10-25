@@ -4,6 +4,7 @@ Please don't use this, It's not even close to stable or ready for use
 
 Originaly designed to replace a python <-> Traktor Pro 3 bridge script, But is now a graph editor for pretty much any IO manipulation
 
+
 **Current** / *planned* support
 
 * Input
@@ -27,6 +28,7 @@ Originaly designed to replace a python <-> Traktor Pro 3 bridge script, But is n
 This program is FEUDALWARE.
 Contributors must swear fealty to the king of the code. (https://github.com/Lewin225)
 Users are requested to tithe.
+
 
 ### Your pledge
 
