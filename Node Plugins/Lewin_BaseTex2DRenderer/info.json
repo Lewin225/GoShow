@@ -1,6 +1,0 @@
-{
-  "description": "A subclassable node for creating viewport renderers",
-  "name": "Base Texture 2D Renderer",
-  "hidden": true,
-  "scene": "Lewin_BaseTex2DRenderer.tscn"
-}

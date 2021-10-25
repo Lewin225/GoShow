@@ -1,0 +1,78 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Bases/Output/DasheNode/PXL_20211008_130800653.jpg" type="Texture" id=1]
+[ext_resource path="res://Bases/Output/DasheNode/DasheNode.gd" type="Script" id=2]
+
+
+[node name="DasheNode" type="GraphNode"]
+margin_right = 282.0
+margin_bottom = 280.0
+title = "dashe 4 ever 0.1"
+show_close = true
+slot/0/left_enabled = true
+slot/0/left_type = 0
+slot/0/left_color = Color( 0.423529, 1, 0.470588, 1 )
+slot/0/right_enabled = false
+slot/0/right_type = 0
+slot/0/right_color = Color( 1, 1, 1, 1 )
+slot/1/left_enabled = true
+slot/1/left_type = 0
+slot/1/left_color = Color( 0.423529, 1, 0.470588, 1 )
+slot/1/right_enabled = false
+slot/1/right_type = 0
+slot/1/right_color = Color( 1, 1, 1, 1 )
+slot/2/left_enabled = true
+slot/2/left_type = 0
+slot/2/left_color = Color( 0.423529, 1, 0.470588, 1 )
+slot/2/right_enabled = false
+slot/2/right_type = 0
+slot/2/right_color = Color( 1, 1, 1, 1 )
+slot/3/left_enabled = false
+slot/3/left_type = 0
+slot/3/left_color = Color( 1, 1, 1, 1 )
+slot/3/right_enabled = false
+slot/3/right_type = 0
+slot/3/right_color = Color( 1, 1, 1, 1 )
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="r" type="SpinBox" parent="."]
+margin_left = 16.0
+margin_top = 24.0
+margin_right = 266.0
+margin_bottom = 48.0
+step = 0.01
+prefix = "R"
+
+[node name="g" type="SpinBox" parent="."]
+margin_left = 16.0
+margin_top = 49.0
+margin_right = 266.0
+margin_bottom = 73.0
+step = 0.01
+prefix = "G"
+
+[node name="b" type="SpinBox" parent="."]
+margin_left = 16.0
+margin_top = 74.0
+margin_right = 266.0
+margin_bottom = 98.0
+step = 0.01
+prefix = "B"
+
+[node name="funny" type="CenterContainer" parent="."]
+margin_left = 16.0
+margin_top = 99.0
+margin_right = 266.0
+margin_bottom = 349.0
+rect_min_size = Vector2( 250, 250 )
+
+[node name="image" type="TextureRect" parent="funny"]
+margin_right = 250.0
+margin_bottom = 250.0
+rect_min_size = Vector2( 250, 250 )
+texture = ExtResource( 1 )
+expand = true
+stretch_mode = 7

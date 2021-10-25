@@ -1,0 +1,34 @@
+[remap]
+
+importer="texture"
+type="StreamTexture"
+path="res://.import/midi_port_icon_135398 (1).png-afb0b8bd96ecc2e19ab59e873330d398.stex"
+metadata={
+"vram_texture": false
+}
+
+[deps]
+
+source_file="res://Bases/Output/DasheNode/midi_port_icon_135398 (1).png"
+dest_files=[ "res://.import/midi_port_icon_135398 (1).png-afb0b8bd96ecc2e19ab59e873330d398.stex" ]
+
+[params]
+
+compress/mode=0
+compress/lossy_quality=0.7
+compress/hdr_mode=0
+compress/bptc_ldr=0
+compress/normal_map=0
+flags/repeat=0
+flags/filter=true
+flags/mipmaps=false
+flags/anisotropic=false
+flags/srgb=2
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/HDR_as_SRGB=false
+process/invert_color=false
+stream=false
+size_limit=0
+detect_3d=true
+svg/scale=1.0

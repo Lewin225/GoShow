@@ -1,13 +1,15 @@
 [gd_scene load_steps=12 format=2]
 
-[ext_resource path="res://Node Plugins/Lewin_Multiply/Lewin_Multiply.tscn" type="PackedScene" id=1]
-[ext_resource path="res://Node Plugins/Lewin_Counter/Lewin_Counter.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Node Plugins/Lewis Node Plugins/Lewin_Multiply/Lewin_Multiply.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Node Plugins/Lewis Node Plugins/Lewin_Counter/Lewin_Counter.tscn" type="PackedScene" id=2]
 [ext_resource path="res://GraphEdit.gd" type="Script" id=3]
-[ext_resource path="res://Node Plugins/Lewin_Midi/Lewin_Midi.tscn" type="PackedScene" id=4]
-[ext_resource path="res://Node Plugins/Lewin_Wrap/Lewin_Wrap.tscn" type="PackedScene" id=5]
-[ext_resource path="res://Node Plugins/Lewin_Viewer/Lewin_Viewer.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Node Plugins/Lewis Node Plugins/Lewin_Midi/Lewin_Midi.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Node Plugins/Lewis Node Plugins/Lewin_Wrap/Lewin_Wrap.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Node Plugins/Lewis Node Plugins/Lewin_Viewer/Lewin_Viewer.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Resources/JetBrainsMono[wght].ttf" type="DynamicFontData" id=11]
-[ext_resource path="res://Node Plugins/Lewin_SpriteNode/Lewin_SpriteNode.tscn" type="PackedScene" id=16]
+[ext_resource path="res://Node Plugins/Lewis Node Plugins/Lewin_SpriteNode/Lewin_SpriteNode.tscn" type="PackedScene" id=16]
+
+
 
 [sub_resource type="DynamicFont" id=1]
 use_mipmaps = true

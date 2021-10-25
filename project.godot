@@ -24,6 +24,10 @@ config/name="GoShow"
 run/main_scene="res://App.tscn"
 config/icon="res://icon.png"
 
+[autoload]
+
+Globals="*res://Resources/Globals.gd"
+
 [display]
 
 window/size/width=1920
