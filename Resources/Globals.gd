@@ -1,6 +1,7 @@
+tool
 extends Node
 
-
+enum GraphNodeCategories{Math, Rendering, Colour, Inputs, Outputs}
 enum GraphDataType{Float, Boolean, Vec3, Vec3Array, Texture2D} 
 var GraphDataColors = [
   Color('#97dfff') #Float

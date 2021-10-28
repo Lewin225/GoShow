@@ -1,7 +1,6 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Node Plugins/Lewins Node Plugins/Lewin_SpriteNode/Lewin_SpriteNode.gd" type="Script" id=1]
-[ext_resource path="res://Node Plugins/Lewins Node Plugins/Lewin_SpriteNode/ccaramella.png" type="Texture" id=2]
 [ext_resource path="res://Bases/Base Node.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Bases/Base Node Port.gd" type="Script" id=4]
 
@@ -10,18 +9,19 @@ margin_left = 1.0
 margin_right = 521.0
 margin_bottom = 489.0
 title = "SpriteBox 2"
-slot/0/left_enabled = false
+slot/0/left_enabled = true
 slot/0/left_type = 0
-slot/0/left_color = Color( 1, 1, 1, 1 )
-slot/0/right_enabled = false
-slot/0/right_type = 0
-slot/0/right_color = Color( 1, 1, 1, 1 )
+slot/0/left_color = Color( 0.592157, 0.87451, 1, 1 )
+slot/0/right_enabled = true
+slot/0/right_type = 4
+slot/0/right_color = Color( 1, 0.65, 0, 1 )
 slot/1/left_enabled = false
 slot/1/left_type = 0
 slot/1/left_color = Color( 1, 1, 1, 1 )
 slot/1/right_enabled = false
 slot/1/right_type = 0
 slot/1/right_color = Color( 1, 1, 1, 1 )
+tags = [ 0 ]
 
 [node name="viewport_renderer" type="ViewportContainer" parent="." index="0"]
 margin_left = 20.0
@@ -46,7 +46,6 @@ render_target_update_mode = 3
 gui_disable_input = true
 
 [node name="Sprite" type="Sprite" parent="viewport_renderer/Viewport" index="0"]
-texture = ExtResource( 2 )
 centered = false
 vframes = 6
 hframes = 5

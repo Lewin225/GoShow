@@ -62,6 +62,10 @@ margin_right = 330.0
 margin_bottom = 421.0
 rect_scale = Vector2( 0.75, 0.75 )
 mouse_filter = 1
+slot/5/left_color = Color( 0.592157, 0.87451, 1, 1 )
+slot/5/right_enabled = true
+slot/5/right_color = Color( 0.592157, 0.87451, 1, 1 )
+tags = [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4, 0, 2, 2, 0, 0, 4, 0, 2, 3, 3, 0, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4, 0, 2, 2, 0, 0, 4, 0, 2, 3, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 2, 0, 0, 4, 0, 2, 3, 3 ]
 
 [node name="MidiNode2" parent="GraphEdit" instance=ExtResource( 4 )]
 margin_left = 0.0
@@ -69,6 +73,10 @@ margin_right = 330.0
 margin_bottom = 421.0
 rect_scale = Vector2( 0.75, 0.75 )
 mouse_filter = 1
+slot/5/left_color = Color( 0.592157, 0.87451, 1, 1 )
+slot/5/right_enabled = true
+slot/5/right_color = Color( 0.592157, 0.87451, 1, 1 )
+tags = [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4, 0, 2, 2, 0, 0, 4, 0, 2, 3, 3, 0, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4, 0, 2, 2, 0, 0, 4, 0, 2, 3, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 2, 0, 0, 4, 0, 2, 3, 3 ]
 
 [node name="Wrap" parent="GraphEdit" instance=ExtResource( 5 )]
 margin_left = 0.0
@@ -83,6 +91,14 @@ margin_right = 240.0
 margin_bottom = 167.0
 rect_scale = Vector2( 0.75, 0.75 )
 mouse_filter = 1
+slot/0/left_enabled = true
+slot/0/left_color = Color( 0.592157, 0.87451, 1, 1 )
+slot/0/right_enabled = true
+slot/0/right_color = Color( 0.592157, 0.87451, 1, 1 )
+slot/1/left_enabled = true
+slot/1/left_color = Color( 0.592157, 0.87451, 1, 1 )
+slot/1/right_color = Color( 0.592157, 0.87451, 1, 1 )
+tags = [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4, 0, 2, 2, 0, 0, 4, 0, 2, 3, 3, 0, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4, 0, 2, 2, 0, 0, 4, 0, 2, 3, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 2, 0, 0, 4, 0, 2, 3, 3 ]
 
 [node name="Multiply Node2" parent="GraphEdit" instance=ExtResource( 1 )]
 margin_left = 0.0
@@ -90,6 +106,14 @@ margin_right = 240.0
 margin_bottom = 167.0
 rect_scale = Vector2( 0.75, 0.75 )
 mouse_filter = 1
+slot/0/left_enabled = true
+slot/0/left_color = Color( 0.592157, 0.87451, 1, 1 )
+slot/0/right_enabled = true
+slot/0/right_color = Color( 0.592157, 0.87451, 1, 1 )
+slot/1/left_enabled = true
+slot/1/left_color = Color( 0.592157, 0.87451, 1, 1 )
+slot/1/right_color = Color( 0.592157, 0.87451, 1, 1 )
+tags = [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4, 0, 2, 2, 0, 0, 4, 0, 2, 3, 3, 0, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4, 0, 2, 2, 0, 0, 4, 0, 2, 3, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 2, 0, 0, 4, 0, 2, 3, 3 ]
 
 [node name="Multiply Node3" parent="GraphEdit" instance=ExtResource( 1 )]
 margin_left = 0.0
@@ -97,6 +121,14 @@ margin_right = 240.0
 margin_bottom = 167.0
 rect_scale = Vector2( 0.75, 0.75 )
 mouse_filter = 1
+slot/0/left_enabled = true
+slot/0/left_color = Color( 0.592157, 0.87451, 1, 1 )
+slot/0/right_enabled = true
+slot/0/right_color = Color( 0.592157, 0.87451, 1, 1 )
+slot/1/left_enabled = true
+slot/1/left_color = Color( 0.592157, 0.87451, 1, 1 )
+slot/1/right_color = Color( 0.592157, 0.87451, 1, 1 )
+tags = [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4, 0, 2, 2, 0, 0, 4, 0, 2, 3, 3, 0, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4, 0, 2, 2, 0, 0, 4, 0, 2, 3, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 2, 0, 0, 4, 0, 2, 3, 3 ]
 
 [node name="Counter" parent="GraphEdit" instance=ExtResource( 2 )]
 margin_left = 0.0
@@ -111,12 +143,24 @@ margin_right = 390.0
 margin_bottom = 241.0
 rect_scale = Vector2( 0.75, 0.75 )
 mouse_filter = 1
+slot/1/left_enabled = true
+slot/1/left_color = Color( 0.592157, 0.87451, 1, 1 )
+slot/1/right_color = Color( 0.592157, 0.87451, 1, 1 )
+slot/3/left_type = 1
+slot/3/left_color = Color( 0.898039, 0.145098, 0.341176, 1 )
+slot/3/right_color = Color( 0.592157, 0.87451, 1, 1 )
+slot/5/left_enabled = true
+slot/5/left_type = 2
+slot/5/left_color = Color( 0.454902, 0.729412, 0.309804, 1 )
+slot/5/right_color = Color( 0.592157, 0.87451, 1, 1 )
+tags = [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4, 0, 2, 2, 0, 0, 4, 0, 2, 3, 3, 0, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4, 0, 2, 2, 0, 0, 4, 0, 2, 3, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 2, 0, 0, 4, 0, 2, 3, 3 ]
 
 [node name="SpriteBox" parent="GraphEdit" instance=ExtResource( 16 )]
 margin_left = 0.0
 margin_right = 520.0
 rect_scale = Vector2( 0.75, 0.75 )
 mouse_filter = 1
+tags = [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4, 0, 2, 2, 0, 0, 4, 0, 2, 3, 3, 0, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4, 0, 2, 2, 0, 0, 4, 0, 2, 3, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 2, 0, 0, 4, 0, 2, 3, 3 ]
 
 [node name="MikuMeter" parent="GraphEdit" instance=ExtResource( 7 )]
 margin_left = 0.0
@@ -124,6 +168,10 @@ margin_right = 463.37
 margin_bottom = 387.0
 rect_scale = Vector2( 0.75, 0.75 )
 mouse_filter = 1
+slot/0/left_enabled = true
+slot/0/left_color = Color( 0.592157, 0.87451, 1, 1 )
+slot/0/right_color = Color( 0.592157, 0.87451, 1, 1 )
+tags = [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4, 0, 2, 2, 0, 0, 4, 0, 2, 3, 3, 0, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4, 0, 2, 2, 0, 0, 4, 0, 2, 3, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 2, 0, 0, 4, 0, 2, 3, 3 ]
 
 [node name="Color Picker" parent="GraphEdit" instance=ExtResource( 8 )]
 margin_left = 0.0
@@ -132,6 +180,13 @@ margin_right = 282.0
 margin_bottom = 197.0
 rect_scale = Vector2( 0.75, 0.75 )
 mouse_filter = 1
+slot/0/left_enabled = true
+slot/0/left_type = 2
+slot/0/left_color = Color( 0.454902, 0.729412, 0.309804, 1 )
+slot/0/right_enabled = true
+slot/0/right_type = 2
+slot/0/right_color = Color( 0.454902, 0.729412, 0.309804, 1 )
+tags = [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4, 0, 2, 2, 0, 0, 4, 0, 2, 3, 3, 0, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4, 0, 2, 2, 0, 0, 4, 0, 2, 3, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 2, 0, 0, 4, 0, 2, 3, 3 ]
 
 [node name="Lerp" parent="GraphEdit" instance=ExtResource( 9 )]
 margin_left = 0.0
@@ -139,6 +194,11 @@ margin_right = 236.0
 margin_bottom = 162.0
 rect_scale = Vector2( 0.75, 0.75 )
 mouse_filter = 1
+slot/0/left_enabled = true
+slot/0/left_color = Color( 0.592157, 0.87451, 1, 1 )
+slot/0/right_enabled = true
+slot/0/right_color = Color( 0.592157, 0.87451, 1, 1 )
+tags = [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4, 0, 2, 2, 0, 0, 4, 0, 2, 3, 3, 0, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4, 0, 2, 2, 0, 0, 4, 0, 2, 3, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 2, 0, 0, 4, 0, 2, 3, 3 ]
 
 [node name="Tex2D Preview" parent="GraphEdit" instance=ExtResource( 10 )]
 margin_left = 0.0
@@ -146,6 +206,11 @@ margin_right = 440.0
 margin_bottom = 390.0
 rect_scale = Vector2( 0.75, 0.75 )
 mouse_filter = 1
+slot/0/left_enabled = true
+slot/0/left_type = 4
+slot/0/left_color = Color( 1, 0.65, 0, 1 )
+slot/0/right_color = Color( 0.592157, 0.87451, 1, 1 )
+tags = [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4, 0, 2, 2, 0, 0, 4, 0, 2, 3, 3, 0, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4, 0, 2, 2, 0, 0, 4, 0, 2, 3, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 2, 0, 0, 4, 0, 2, 3, 3 ]
 
 [node name="Vector3" parent="GraphEdit" instance=ExtResource( 12 )]
 margin_left = 0.0
@@ -153,6 +218,18 @@ margin_right = 210.0
 margin_bottom = 169.0
 rect_scale = Vector2( 0.75, 0.75 )
 mouse_filter = 1
+slot/0/left_enabled = true
+slot/0/left_color = Color( 0.592157, 0.87451, 1, 1 )
+slot/0/right_color = Color( 0.592157, 0.87451, 1, 1 )
+slot/1/left_enabled = true
+slot/1/left_color = Color( 0.592157, 0.87451, 1, 1 )
+slot/1/right_enabled = true
+slot/1/right_type = 2
+slot/1/right_color = Color( 0.454902, 0.729412, 0.309804, 1 )
+slot/2/left_enabled = true
+slot/2/left_color = Color( 0.592157, 0.87451, 1, 1 )
+slot/2/right_color = Color( 0.592157, 0.87451, 1, 1 )
+tags = [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4, 0, 2, 2, 0, 0, 4, 0, 2, 3, 3, 0, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4, 0, 2, 2, 0, 0, 4, 0, 2, 3, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 2, 0, 0, 4, 0, 2, 3, 3 ]
 
 [node name="Vector 3 Array" parent="GraphEdit" instance=ExtResource( 14 )]
 margin_left = 0.0
@@ -160,6 +237,16 @@ margin_right = 318.0
 margin_bottom = 167.0
 rect_scale = Vector2( 0.75, 0.75 )
 mouse_filter = 1
+slot/0/left_enabled = true
+slot/0/left_type = 2
+slot/0/left_color = Color( 0.454902, 0.729412, 0.309804, 1 )
+slot/0/right_enabled = true
+slot/0/right_type = 3
+slot/0/right_color = Color( 0.211765, 0.729412, 0.458824, 1 )
+slot/1/left_enabled = true
+slot/1/left_color = Color( 0.592157, 0.87451, 1, 1 )
+slot/1/right_color = Color( 0.592157, 0.87451, 1, 1 )
+tags = [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4, 0, 2, 2, 0, 0, 4, 0, 2, 3, 3, 0, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4, 0, 2, 2, 0, 0, 4, 0, 2, 3, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 2, 0, 0, 4, 0, 2, 3, 3 ]
 
 [node name="Open Pixel Control" parent="GraphEdit" instance=ExtResource( 13 )]
 margin_left = 0.0
@@ -167,5 +254,16 @@ margin_right = 408.0
 margin_bottom = 162.0
 rect_scale = Vector2( 0.75, 0.75 )
 mouse_filter = 1
+slot/1/left_enabled = true
+slot/1/left_type = 3
+slot/1/left_color = Color( 0.211765, 0.729412, 0.458824, 1 )
+slot/1/right_color = Color( 0.592157, 0.87451, 1, 1 )
+tags = [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4, 0, 2, 2, 0, 0, 4, 0, 2, 3, 3, 0, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4, 0, 2, 2, 0, 0, 4, 0, 2, 3, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 2, 0, 0, 4, 0, 2, 3, 3 ]
+
+[node name="Panel" type="Panel" parent="GraphEdit"]
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = -870.0
+margin_bottom = 41.0
 [connection signal="connection_request" from="GraphEdit" to="GraphEdit" method="_on_GraphEdit_connection_request"]
 [connection signal="disconnection_request" from="GraphEdit" to="GraphEdit" method="_on_GraphEdit_disconnection_request"]

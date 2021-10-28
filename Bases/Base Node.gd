@@ -1,3 +1,4 @@
+tool
 extends GraphNode
 
 
@@ -14,7 +15,11 @@ var input_links = {}
 var output_links = {}
 var _slots = [] # Don't use this, It's just for getting the port InDeX right
 var in_ports = []
+var all_ports = []
 var out_ports = []
+
+var _tags = []
+export(Array, Globals.GraphNodeCategories) var tags
 
 func load_store(key):
 	if store.has(key):
@@ -69,7 +74,8 @@ func update_port_data():
 		if slot[0].has_method("_j0vfg5943wukfug54893qw0"): # It's a port
 			var port_node = slot[0]
 			var port_idx = slot[1]
-				
+			
+			all_ports.append(port_node)
 			if port_node.HasOutPort:
 				out_ports.append(port_node)
 			if port_node.HasInPort:
@@ -86,11 +92,18 @@ func update_port_data():
 			null ) #Right Texture
 	
 func _ready():
-	#print(self.name, " ready")
-	
-	
+
 	if Engine.editor_hint: # Code to execute in editor.
-		pass
+		update_port_data()
+		_tags = []
+		for port in all_ports:
+			if port.HasInPort:
+				_tags.append("in:"+Globals.GraphDataType.keys()[port.InType])
+			if port.HasOutPort:
+				_tags.append("out:"+Globals.GraphDataType.keys()[port.OutType])
+		for tag in tags:
+			_tags.append("tag:"+Globals.GraphNodeCategories.keys()[tag])
+		
 		
 	if not Engine.editor_hint: # Code to execute in game.
 		update_port_data()
