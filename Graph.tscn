@@ -259,11 +259,5 @@ slot/1/left_type = 3
 slot/1/left_color = Color( 0.211765, 0.729412, 0.458824, 1 )
 slot/1/right_color = Color( 0.592157, 0.87451, 1, 1 )
 tags = [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4, 0, 2, 2, 0, 0, 4, 0, 2, 3, 3, 0, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4, 0, 2, 2, 0, 0, 4, 0, 2, 3, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 2, 0, 0, 4, 0, 2, 3, 3 ]
-
-[node name="Panel" type="Panel" parent="GraphEdit"]
-anchor_left = 1.0
-anchor_right = 1.0
-margin_left = -870.0
-margin_bottom = 41.0
 [connection signal="connection_request" from="GraphEdit" to="GraphEdit" method="_on_GraphEdit_connection_request"]
 [connection signal="disconnection_request" from="GraphEdit" to="GraphEdit" method="_on_GraphEdit_disconnection_request"]

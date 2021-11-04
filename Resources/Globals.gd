@@ -11,3 +11,6 @@ var GraphDataColors = [
 , Color.orange     #Texture2D
 ] 
 
+
+var PROPERTYLIST_SCRIPT_VARIABLE = 8192
+var PROPERTYLIST_EXPORT_VARIABLE = 8199
